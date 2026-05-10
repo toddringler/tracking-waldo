@@ -1,0 +1,29 @@
+{
+  "name": "tracking-waldo",
+  "version": "1.0.0",
+  "description": "Waldo Expedition Tracking System — Arctic overlanding journal disguised as a GPS tracker",
+  "scripts": {
+    "gpx": "node scripts/gpx-to-geojson.js",
+    "events": "node scripts/build-waldo-events.js",
+    "build": "npm run gpx && npm run events && node scripts/build-site.js",
+    "start": "npx serve public"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "arctic",
+    "expedition",
+    "tracking",
+    "mapbox",
+    "gps"
+  ],
+  "author": "Todd Ringler",
+  "license": "MIT",
+  "dependencies": {
+    "fast-xml-parser": "^5.7.3"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

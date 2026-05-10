@@ -1,0 +1,24 @@
+{
+  "day": 2,
+  "date": "2026-06-02",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 63.7333,
+      "lon": -148.9167,
+      "title": "Denali in Full View",
+      "thought": "At 20,310 feet, Denali doesn't care about Waldo. And yet Waldo cannot look away. There is a humility that comes with being a small truck next to the largest thing in North America.",
+      "mood": "content",
+      "status": "Clear skies. Pulled over for 40 minutes. No regrets."
+    },
+    {
+      "type": "camp",
+      "lat": 64.5000,
+      "lon": -149.8000,
+      "title": "Wild Camp — Nenana River Corridor",
+      "thought": "Waldo is parked on gravel 50 feet from the Nenana River. The sound is extraordinary. There is no cell signal and Starlink is pointed through a spruce canopy. This is fine. This is the point.",
+      "mood": "content",
+      "status": "Camped 2100. River: 15ft, fast. Bears: theoretically present."
+    }
+  ]
+}
