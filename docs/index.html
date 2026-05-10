@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Waldo — Arctic Expedition Tracker</title>
   <meta name="description" content="Live Arctic expedition journal for Waldo, a 2024 Toyota Tacoma TRD Off-Road with Tune M1 camper. Tracking the journey north." />
   <link rel="stylesheet" href="styles.css" />
@@ -24,7 +24,7 @@
     <div id="header-brand">
       <span id="header-icon">🚐</span>
       <div>
-        <h1>Waldo Expedition</h1>
+        <h1>Waldo Expedition 2026</h1>
         <div id="header-subtitle">2024 Tacoma TRD · Tune M1 · KO3</div>
       </div>
     </div>
@@ -48,6 +48,35 @@
       <p style="font-size:12px;color:var(--color-text-muted);font-style:italic;">Loading events…</p>
     </div>
   </aside>
+
+  <!-- Text Demo Drawer -->
+  <div id="text-demo-overlay" aria-hidden="true">
+    <section id="text-demo-drawer" role="dialog" aria-modal="true" aria-labelledby="text-demo-title">
+      <div id="text-demo-header">
+        <div>
+          <h2 id="text-demo-title">Waldo Field Notes</h2>
+          <p id="text-demo-subtitle">A long-form text box for drafts, logs, and expedition notes.</p>
+        </div>
+        <button id="text-demo-close" title="Close text demo">✕</button>
+      </div>
+      <div id="text-demo-body">
+        <div id="text-demo-content" role="textbox" aria-readonly="true" tabindex="0">
+          <p>Day 19 of the run north began with a quiet sky and a low, steady wind that moved across the tundra like a hand smoothing fabric. Waldo sat in the morning light with a dusting of frost on the hood, the kind of stillness that makes you feel both small and remarkably lucky. The route ahead looked simple on the map and complicated in the world: gravel, soft shoulders, a few miles of uncertainty, and the kind of weather that can turn polite in one hour and stubborn in the next.</p>
+          <p>The plan was to keep moving, keep the tank topped off when possible, and keep an eye on the small details that tend to matter most in the north. Tire pressure checked. Fluids checked. Comms checked. Snacks checked twice, because a person can survive a lot of inconvenience but should not be expected to thrive on an empty stomach and optimism alone. The road surface changed every few miles, from firm packed earth to a washboard shimmer that rattled every loose object in the cab. Waldo handled it well, as always, with the serene confidence of a machine that knows exactly what it was built to do.</p>
+          <p>By midday the clouds opened enough to reveal a pale blue sky stretched thin over the horizon. The light made everything look sharper: the distant hills, the shallow water in the ditches, the black ribbon of the track ahead. There was a stop where the coffee was hot, the conversation was friendly, and the tables were sticky in the honest way of places that serve more travelers than tourists. A map was unfolded. A route was compared. A few assumptions were quietly retired. That is how these trips work: not by one grand decision, but by a long sequence of small, sensible adjustments.</p>
+          <p>Later, when the road bent toward a line of low trees, the mood shifted. The terrain felt wider, the silence deeper, and the hours between towns became more than a statistic. You start to notice the texture of everything out there: the angle of the light, the sound of gravel under tire, the way a single raven can make a landscape feel inhabited. That is the thing the map never quite captures. The map can show progress, but it cannot show the feeling of being in the middle of it.</p>
+          <p>Tonight’s note is simple. Waldo is running well. The route is holding. The weather is being measured, not trusted. And the journey is still doing what it does best: turning ordinary miles into something worth remembering.</p>
+          <p>The next stretch of road offered its own small education. A shallow ditch ran alongside the shoulder, a reminder that the surface could change without warning. The sky stayed bright but the wind picked up, carrying the smell of damp earth and distant water. Every mile felt deliberate. Every pause felt useful. Even the silence had structure to it, like a sentence waiting for the right word.</p>
+          <p>By late afternoon the cab had that familiar long-trip feeling, where the seats seem to hold the shape of the day and the dashboard light looks almost friendly. The map on the screen was still a map, but the lived version of the route had more texture: the vibration through the wheel, the brief glint of sunlight on a roadside sign, the low hum that tells you the tires are still content with the gravel. It was the kind of driving that rewards patience more than speed.</p>
+          <p>Then came the kind of quiet that makes you lower your voice even when you are alone. The world narrowed to the road, the lane markings, and the steady forward motion of the truck. A pair of birds crossed ahead and disappeared into the scrub. The horizon stayed far away. The day did not ask for anything dramatic, only attention. That was enough. Attention, after all, is what turns a route into a memory and a trip into a story.</p>
+          <p>So the test note grows a little longer here, with one more paragraph and then another, just to make sure the box has to work for it. The scrollbar should appear now once the content exceeds the visible space, and if it does not, that will be a clear sign the box still needs adjustment. The point is not the prose itself. The point is to make the layout prove it can handle a genuinely long note without breaking the rest of the page.</p>
+        </div>
+      </div>
+      <div id="text-demo-footer">
+        <div id="text-demo-meta">Words: <span id="text-demo-count">0</span></div>
+      </div>
+    </section>
+  </div>
 
   <!-- Map -->
   <div id="map"></div>
@@ -108,13 +137,54 @@
       <span class="stat-value" id="stat-points">—</span>
     </div>
     <div class="stat-item">
-      <span class="stat-label">Last Position</span>
+      <span class="stat-label">Last Known Position</span>
       <span class="stat-value" id="stat-position">—</span>
     </div>
+    <button class="btn text-demo-footer-btn" id="toggle-text-demo-btn" title="Open text demo">
+      📝 Waldo's Orig Story
+    </button>
   </div>
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
   <script src="config.js"></script>
+  <script>
+    (function() {
+      const overlay = document.getElementById('text-demo-overlay');
+      const openBtn = document.getElementById('toggle-text-demo-btn');
+      const closeBtn = document.getElementById('text-demo-close');
+      const content = document.getElementById('text-demo-content');
+      const count = document.getElementById('text-demo-count');
+
+      function updateCount() {
+        const words = content.textContent.trim().match(/\S+/g);
+        count.textContent = words ? words.length : 0;
+      }
+
+      function openDrawer() {
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        content.focus();
+        updateCount();
+      }
+
+      function closeDrawer() {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        openBtn.focus();
+      }
+
+      openBtn.addEventListener('click', openDrawer);
+      closeBtn.addEventListener('click', closeDrawer);
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) closeDrawer();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && overlay.classList.contains('open')) closeDrawer();
+      });
+
+      updateCount();
+    })();
+  </script>
   <script src="map.js"></script>
 </body>
 </html>

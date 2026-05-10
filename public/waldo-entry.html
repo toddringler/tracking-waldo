@@ -13,6 +13,20 @@
 </head>
 <body>
 
+  <!-- Admin verification -->
+  <script>
+    // Protect this page: require admin token
+    const ADMIN_TOKEN = 'add-event';
+    if (sessionStorage.getItem('waldo_admin_verified') !== 'true') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('admin') === ADMIN_TOKEN) {
+        sessionStorage.setItem('waldo_admin_verified', 'true');
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+
   <!-- Header -->
   <header id="header">
     <div id="header-brand">
@@ -142,7 +156,7 @@
     mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
       container: 'entry-map',
-      style: 'mapbox://styles/mapbox/dark-v11',
+      style: 'mapbox://styles/mapbox/outdoors-v12',
       center: [-149.9003, 61.2181],
       zoom: 5,
     });
@@ -163,7 +177,7 @@
             source: 'ref-route',
             filter: ['==', ['geometry-type'], 'LineString'],
             paint: {
-              'line-color': '#f0a500',
+              'line-color': '#000000',
               'line-width': 2,
               'line-opacity': 0.5,
             },

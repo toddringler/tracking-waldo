@@ -142,7 +142,7 @@
     mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
       container: 'entry-map',
-      style: 'mapbox://styles/mapbox/dark-v11',
+      style: 'mapbox://styles/mapbox/outdoors-v12',
       center: [-149.9003, 61.2181],
       zoom: 5,
     });
@@ -163,7 +163,7 @@
             source: 'ref-route',
             filter: ['==', ['geometry-type'], 'LineString'],
             paint: {
-              'line-color': '#f0a500',
+              'line-color': '#000000',
               'line-width': 2,
               'line-opacity': 0.5,
             },
