@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waldo — Arctic Expedition Tracker</title>
+  <meta name="description" content="Live Arctic expedition journal for Waldo, a 2024 Toyota Tacoma TRD Off-Road with Tune M1 camper. Tracking the journey north." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">INITIALIZING WALDO SYSTEMS…</div>
+  </div>
+
+  <!-- Error Banner -->
+  <div id="error-banner"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <div id="header-brand">
+      <span id="header-icon">🚐</span>
+      <div>
+        <h1>Waldo Expedition</h1>
+        <div id="header-subtitle">2024 Tacoma TRD · Tune M1 · KO3</div>
+      </div>
+    </div>
+    <div id="header-actions">
+      <button class="btn" id="toggle-sidebar-btn" title="Show event log">
+        📋 Events
+      </button>
+      <a href="waldo-entry.html" class="btn btn-accent" title="Add a Waldo event">
+        ✏️ Add Event
+      </a>
+    </div>
+  </header>
+
+  <!-- Sidebar Event Log -->
+  <aside id="sidebar">
+    <div id="sidebar-header">
+      <h2>Waldo Event Log</h2>
+      <button id="sidebar-close" title="Close">✕</button>
+    </div>
+    <div id="sidebar-content">
+      <p style="font-size:12px;color:var(--color-text-muted);font-style:italic;">Loading events…</p>
+    </div>
+  </aside>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Map Controls -->
+  <div id="map-controls">
+    <button class="map-btn active" id="btn-route" title="Toggle route">〰️</button>
+    <button class="map-btn active" id="btn-events" title="Toggle events">📍</button>
+    <button class="map-btn" id="btn-legend" title="Toggle legend">🗺️</button>
+    <button class="map-btn" id="btn-fit" title="Fit to route">⛶</button>
+  </div>
+
+  <!-- Legend -->
+  <div id="legend">
+    <div class="legend-title">Map Legend</div>
+    <div class="legend-item">
+      <div class="legend-line" style="background:var(--color-route)"></div>
+      <span>Expedition Route</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--color-camp)"></div>
+      <span>Camp</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--color-fuel)"></div>
+      <span>Fuel Stop</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--color-sighting)"></div>
+      <span>Sighting</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--color-incident)"></div>
+      <span>Incident</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--color-ferry)"></div>
+      <span>Ferry</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:var(--color-current);box-shadow:0 0 0 3px rgba(240,165,0,0.3)"></div>
+      <span>Last Position</span>
+    </div>
+  </div>
+
+  <!-- Stats Strip -->
+  <div id="stats-strip">
+    <div class="stat-item">
+      <span class="stat-label">Day</span>
+      <span class="stat-value" id="stat-day">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Events</span>
+      <span class="stat-value" id="stat-events">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Track Points</span>
+      <span class="stat-value" id="stat-points">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Last Position</span>
+      <span class="stat-value" id="stat-position">—</span>
+    </div>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  <script src="config.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
