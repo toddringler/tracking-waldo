@@ -43,6 +43,8 @@ let routeVisible = true;
 let eventsVisible = true;
 let routeData = null;
 let eventsData = null;
+let loadingTimeoutId = null;
+const LOADING_TIMEOUT_MS = 15000;
 
 // ---------------------------------------------------------------------------
 // Initialise map
@@ -50,9 +52,14 @@ let eventsData = null;
 function initMap() {
   mapboxgl.accessToken = MAPBOX_TOKEN;
 
+  loadingTimeoutId = window.setTimeout(() => {
+    showError('Map is taking longer than expected to load. Check your connection and reload if needed.');
+    hideLoading();
+  }, LOADING_TIMEOUT_MS);
+
   map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v11',
+    style: 'mapbox://styles/mapbox/outdoors-v12',
     center: [-149.9003, 61.2181], // Anchorage default
     zoom: 5,
     attributionControl: false,
@@ -105,7 +112,7 @@ function addRouteLayer(data) {
     filter: ['==', ['geometry-type'], 'LineString'],
     layout: { 'line-join': 'round', 'line-cap': 'round' },
     paint: {
-      'line-color': '#f0a500',
+      'line-color': '#000000',
       'line-width': 10,
       'line-opacity': 0.15,
       'line-blur': 4,
@@ -120,7 +127,7 @@ function addRouteLayer(data) {
     filter: ['==', ['geometry-type'], 'LineString'],
     layout: { 'line-join': 'round', 'line-cap': 'round' },
     paint: {
-      'line-color': '#f0a500',
+      'line-color': '#000000',
       'line-width': ['interpolate', ['linear'], ['zoom'], 4, 2, 10, 4],
       'line-opacity': 0.9,
     },
@@ -415,7 +422,12 @@ async function fetchJSON(url) {
 }
 
 function hideLoading() {
+  if (loadingTimeoutId !== null) {
+    window.clearTimeout(loadingTimeoutId);
+    loadingTimeoutId = null;
+  }
   const el = document.getElementById('loading');
+  if (!el || el.classList.contains('hidden')) return;
   el.classList.add('hidden');
   setTimeout(() => el.remove(), 500);
 }
