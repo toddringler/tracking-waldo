@@ -1,0 +1,24 @@
+{
+  "day": 1,
+  "date": "2026-06-01",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 61.2181,
+      "lon": -149.9003,
+      "title": "Departure — Anchorage, AK",
+      "thought": "Waldo has been pointed north. The pavement ends somewhere ahead and Waldo can already feel it. KO3s are ready. Starlink dome is locked. The camper smells like fresh coffee and ambition.",
+      "mood": "optimistic",
+      "status": "Departed 0800. Fuel topped. Systems nominal."
+    },
+    {
+      "type": "fuel",
+      "lat": 62.0000,
+      "lon": -148.5000,
+      "title": "Fuel Stop — Cantwell",
+      "thought": "Waldo distrusts all range estimates north of the Alaska Range. The gauge said half a tank. Waldo filled it anyway. This is not pessimism. This is arithmetic.",
+      "mood": "cautious",
+      "status": "Fuel: 32 gal @ $5.89/gal. Running total: $188."
+    }
+  ]
+}
