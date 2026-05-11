@@ -32,7 +32,7 @@
       <button class="btn" id="toggle-sidebar-btn" title="Show event log">
         📋 Events
       </button>
-      <a href="waldo-entry.html" class="btn btn-accent" title="Add a Waldo event">
+      <a href="waldo-entry.html" id="add-event-btn" class="btn btn-accent" title="Add a Waldo event">
         ✏️ Add Event
       </a>
     </div>
@@ -129,8 +129,8 @@
       <span class="stat-value" id="stat-day">—</span>
     </div>
     <div class="stat-item">
-      <span class="stat-label">Events</span>
-      <span class="stat-value" id="stat-events">—</span>
+      <span class="stat-label">Distance</span>
+      <span class="stat-value" id="stat-distance">—</span>
     </div>
     <div class="stat-item">
       <span class="stat-label">Track Points</span>
@@ -147,6 +147,25 @@
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
   <script src="config.js"></script>
+  <script>
+    // Admin verification for Add Event button
+    (function() {
+      const ADMIN_TOKEN = 'add-event';
+      const addEventBtn = document.getElementById('add-event-btn');
+      
+      // Check if already authenticated in this session
+      if (sessionStorage.getItem('waldo_admin_verified') !== 'true') {
+        addEventBtn.style.display = 'none';
+      }
+      
+      // Check URL for admin token
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('admin') === ADMIN_TOKEN) {
+        sessionStorage.setItem('waldo_admin_verified', 'true');
+        addEventBtn.style.display = 'block';
+      }
+    })();
+  </script>
   <script>
     (function() {
       const overlay = document.getElementById('text-demo-overlay');
