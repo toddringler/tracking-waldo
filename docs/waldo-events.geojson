@@ -6,6 +6,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -148.286693,
+          62.220309
+        ]
+      },
+      "properties": {
+        "day": 12,
+        "date": "2026-05-09",
+        "type": "sighting",
+        "title": "suspicious grizzly",
+        "thought": "gravel keeps the world going round",
+        "mood": "cautious",
+        "status": "i prefer gravel. to each their own"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -149.9003,
           61.2181
         ]
@@ -116,6 +135,6 @@
       }
     }
   ],
-  "generated": "2026-05-10T01:17:27.382Z",
-  "totalEvents": 6
+  "generated": "2026-05-11T02:37:50.122Z",
+  "totalEvents": 7
 }

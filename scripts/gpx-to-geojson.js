@@ -16,6 +16,35 @@ const { XMLParser } = require('fast-xml-parser');
 const TRACKS_DIR = path.join(__dirname, '..', 'data', 'tracks');
 const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'route.geojson');
 
+function haversineDistanceKm(a, b) {
+  const toRad = deg => (deg * Math.PI) / 180;
+  const [lon1, lat1] = a;
+  const [lon2, lat2] = b;
+
+  const R = 6371; // Earth mean radius in km
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const lat1Rad = toRad(lat1);
+  const lat2Rad = toRad(lat2);
+
+  const h =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1Rad) * Math.cos(lat2Rad) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function totalDistanceKm(coordinates) {
+  if (!Array.isArray(coordinates) || coordinates.length < 2) return 0;
+
+  let total = 0;
+  for (let i = 1; i < coordinates.length; i += 1) {
+    total += haversineDistanceKm(coordinates[i - 1], coordinates[i]);
+  }
+  return total;
+}
+
 function parseGpxFile(filePath) {
   const xml = fs.readFileSync(filePath, 'utf8');
   const parser = new XMLParser({
@@ -79,6 +108,8 @@ function main() {
     allCoordinates = allCoordinates.concat(coords);
   }
 
+  const totalKm = totalDistanceKm(allCoordinates);
+
   const geojson = {
     type: 'FeatureCollection',
     features: [
@@ -89,6 +120,7 @@ function main() {
           description: 'GPS track exported from Gaia GPS',
           generated: new Date().toISOString(),
           pointCount: allCoordinates.length,
+          distanceKm: Number(totalKm.toFixed(3)),
         },
         geometry: {
           type: 'LineString',
@@ -123,6 +155,7 @@ function main() {
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(geojson, null, 2));
   console.log(`\nOutput: ${OUTPUT_FILE}`);
   console.log(`Total track points: ${allCoordinates.length}`);
+  console.log(`Total distance: ${totalKm.toFixed(3)} km`);
 }
 
 main();

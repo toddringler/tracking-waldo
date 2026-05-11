@@ -255,7 +255,7 @@ function addCurrentPositionLayer(data) {
   // Update stat
   const [lon, lat] = currentFeature.geometry.coordinates;
   document.getElementById('stat-position').textContent =
-    `${lat.toFixed(4)}°N, ${Math.abs(lon).toFixed(4)}°W`;
+    `${lat.toFixed(2)}°N, ${Math.abs(lon).toFixed(2)}°W`;
 }
 
 // ---------------------------------------------------------------------------
@@ -331,9 +331,12 @@ window.flyToEvent = flyToEvent;
 // Stats strip
 // ---------------------------------------------------------------------------
 function updateStats(routeData, eventsData) {
-  const points = routeData?.features?.find(f => f.geometry?.type === 'LineString')
-    ?.geometry?.coordinates?.length || 0;
-  const eventCount = eventsData?.features?.length || 0;
+  const lineFeature = routeData?.features?.find(f => f.geometry?.type === 'LineString');
+  const coordinates = lineFeature?.geometry?.coordinates || [];
+  const points = coordinates.length;
+
+  const distanceKmProp = Number(lineFeature?.properties?.distanceKm);
+  const distanceKm = Number.isFinite(distanceKmProp) ? distanceKmProp : totalDistanceKm(coordinates);
 
   // Find max day
   const maxDay = eventsData?.features?.reduce((max, f) => {
@@ -342,7 +345,10 @@ function updateStats(routeData, eventsData) {
   }, 0);
 
   document.getElementById('stat-day').textContent = maxDay > 0 ? maxDay : '—';
-  document.getElementById('stat-events').textContent = eventCount;
+  document.getElementById('stat-distance').textContent =
+    distanceKm > 0
+      ? `${Math.round(distanceKm).toLocaleString()} km`
+      : '—';
   document.getElementById('stat-points').textContent = points.toLocaleString();
 }
 
@@ -446,6 +452,36 @@ function escapeHtml(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
+}
+
+function haversineDistanceKm(a, b) {
+  const toRad = deg => (deg * Math.PI) / 180;
+  const [lon1, lat1] = a;
+  const [lon2, lat2] = b;
+
+  const R = 6371;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const lat1Rad = toRad(lat1);
+  const lat2Rad = toRad(lat2);
+
+  const h =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1Rad) * Math.cos(lat2Rad) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function totalDistanceKm(coordinates) {
+  if (!Array.isArray(coordinates) || coordinates.length < 2) return 0;
+
+  let total = 0;
+  for (let i = 1; i < coordinates.length; i += 1) {
+    total += haversineDistanceKm(coordinates[i - 1], coordinates[i]);
+  }
+
+  return total;
 }
 
 // ---------------------------------------------------------------------------
