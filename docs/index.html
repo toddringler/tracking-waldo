@@ -146,8 +146,31 @@
   </div>
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
-  <script src="local-config.js"></script>
-  <script src="config.js"></script>
+  <script>
+    (function() {
+      function loadScript(src) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.async = false;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+
+      // Prefer local overrides when present; otherwise fall back to shared config.
+      loadScript('local-config.js')
+        .then(() => {
+          if (!window.WALDO_CONFIG || !window.WALDO_CONFIG.mapboxToken) {
+            return loadScript('config.js');
+          }
+          return Promise.resolve();
+        })
+        .catch(() => loadScript('config.js'))
+        .then(() => loadScript('map.js'));
+    })();
+  </script>
   <script>
     // Admin verification for Add Event button
     (function() {
@@ -205,6 +228,5 @@
       updateCount();
     })();
   </script>
-  <script src="map.js"></script>
 </body>
 </html>
