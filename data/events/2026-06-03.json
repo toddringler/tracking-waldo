@@ -9,7 +9,9 @@
       "title": "Mud Season is Real",
       "thought": "The GPS said the road was passable. The road had a different opinion. Waldo did not get stuck — but Waldo had a conversation with gravity that lasted 20 minutes and involved a hi-lift jack.",
       "mood": "concerned",
-      "status": "Road passable but deeply rutted. Aired down to 20psi. Recovered without assistance."
+      "status": "Road passable but deeply rutted. Aired down to 20psi. Recovered without assistance.",
+      "photoFilename": "test-photo.svg",
+      "photoCaption": "Test image for validating the event photo popup."
     },
     {
       "type": "camp",

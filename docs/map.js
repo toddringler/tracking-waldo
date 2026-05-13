@@ -35,6 +35,8 @@ const MOOD_EMOJI = {
   feral:      '🤪',
 };
 
+const PHOTO_BASE_PATH = 'events/photos/';
+
 // ---------------------------------------------------------------------------
 // State
 // ---------------------------------------------------------------------------
@@ -265,6 +267,9 @@ function addCurrentPositionLayer(data) {
 function showEventPopup(coords, props) {
   const config = EVENT_CONFIG[props.type] || { color: '#f0a500', emoji: '📍', label: props.type };
   const moodEmoji = MOOD_EMOJI[props.mood] || '';
+  const photoFilename = normalizePhotoFilename(props.photoFilename);
+  const photoUrl = photoFilename ? `${PHOTO_BASE_PATH}${encodeURIComponent(photoFilename)}` : '';
+  const photoCaption = props.photoCaption || props.title || 'Event photo';
 
   const html = `
     <div class="popup-inner">
@@ -279,14 +284,23 @@ function showEventPopup(coords, props) {
       <div class="popup-meta">
         ${props.mood ? `<span class="popup-mood">${moodEmoji} ${escapeHtml(props.mood)}</span>` : ''}
       </div>
+      ${photoUrl ? `<button class="btn popup-photo-btn" data-photo-url="${escapeHtml(photoUrl)}" data-photo-caption="${escapeHtml(photoCaption)}">📷 View Photo</button>` : ''}
       ${props.status ? `<div class="popup-status">${escapeHtml(props.status)}</div>` : ''}
     </div>
   `;
 
-  new mapboxgl.Popup({ closeButton: true, maxWidth: '340px', offset: 12 })
+  const popup = new mapboxgl.Popup({ closeButton: true, maxWidth: '340px', offset: 12 })
     .setLngLat(coords)
     .setHTML(html)
     .addTo(map);
+
+  const popupEl = popup.getElement();
+  const photoBtn = popupEl.querySelector('.popup-photo-btn');
+  if (photoBtn) {
+    photoBtn.addEventListener('click', () => {
+      openPhotoOverlay(photoBtn.dataset.photoUrl || '', photoBtn.dataset.photoCaption || 'Event photo');
+    });
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -474,6 +488,60 @@ function showError(msg) {
   el.style.display = 'block';
 }
 
+function setupPhotoOverlay() {
+  const overlay = document.getElementById('photo-overlay');
+  const closeBtn = document.getElementById('photo-overlay-close');
+
+  if (!overlay || !closeBtn) return;
+
+  closeBtn.addEventListener('click', closePhotoOverlay);
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closePhotoOverlay();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay.classList.contains('open')) closePhotoOverlay();
+  });
+}
+
+function openPhotoOverlay(url, caption) {
+  if (!url) return;
+
+  const overlay = document.getElementById('photo-overlay');
+  const image = document.getElementById('photo-overlay-image');
+  const captionEl = document.getElementById('photo-overlay-caption');
+
+  if (!overlay || !image || !captionEl) return;
+
+  captionEl.textContent = caption || '';
+  image.onerror = () => {
+    showError('Photo could not be loaded.');
+    closePhotoOverlay();
+  };
+  image.src = url;
+
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+}
+
+function closePhotoOverlay() {
+  const overlay = document.getElementById('photo-overlay');
+  const image = document.getElementById('photo-overlay-image');
+
+  if (!overlay || !image) return;
+
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  image.src = '';
+  image.onerror = null;
+}
+
+function normalizePhotoFilename(value) {
+  if (!value) return '';
+  const trimmed = String(value).trim();
+  if (!trimmed) return '';
+  return trimmed.replace(/^.*[\\/]/, '');
+}
+
 function escapeHtml(str) {
   if (!str) return '';
   return String(str)
@@ -517,4 +585,5 @@ function totalDistanceKm(coordinates) {
 // ---------------------------------------------------------------------------
 // Boot
 // ---------------------------------------------------------------------------
+setupPhotoOverlay();
 initMap();
