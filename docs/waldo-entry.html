@@ -166,11 +166,27 @@
 
     // Try to load existing route for reference
     map.on('load', () => {
-      fetch('route.geojson')
+      fetch('route-files.json')
         .then(r => r.ok ? r.json() : null)
-        .then(data => {
-          if (!data) return;
-          map.addSource('ref-route', { type: 'geojson', data });
+        .then(manifest => {
+          const routeFiles = Array.isArray(manifest?.tracks)
+            ? manifest.tracks.map(track => track.geojson).filter(Boolean)
+            : [];
+          if (routeFiles.length === 0) return [];
+          return Promise.allSettled(routeFiles.map(file => fetch(file).then(resp => resp.ok ? resp.json() : null)));
+        })
+        .then(results => {
+          if (!Array.isArray(results)) return;
+          const features = results
+            .filter(result => result.status === 'fulfilled' && result.value)
+            .flatMap(result => result.value.features || []);
+
+          if (features.length === 0) return;
+
+          map.addSource('ref-route', {
+            type: 'geojson',
+            data: { type: 'FeatureCollection', features },
+          });
           map.addLayer({
             id: 'ref-route-line',
             type: 'line',
@@ -183,7 +199,7 @@
             },
           });
         })
-        .catch(() => { /* route.geojson not present yet — that's fine */ });
+        .catch(() => { /* route-files may not exist yet during first setup */ });
     });
 
     // ── Map click → set coords ────────────────────────────────────────────

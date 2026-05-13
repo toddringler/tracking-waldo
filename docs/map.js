@@ -78,7 +78,7 @@ function initMap() {
 async function onMapLoad() {
   try {
     [routeData, eventsData] = await Promise.all([
-      fetchJSON('route.geojson'),
+      loadRouteData(),
       fetchJSON('waldo-events.geojson'),
     ]);
   } catch (err) {
@@ -218,9 +218,10 @@ function addEventsLayer(data) {
 // Add current position marker
 // ---------------------------------------------------------------------------
 function addCurrentPositionLayer(data) {
-  const currentFeature = data.features?.find(
+  const currentFeatures = (data.features || []).filter(
     f => f.properties?.type === 'current-position'
   );
+  const currentFeature = currentFeatures[currentFeatures.length - 1];
   if (!currentFeature) return;
 
   map.addSource('current-pos', {
@@ -331,12 +332,16 @@ window.flyToEvent = flyToEvent;
 // Stats strip
 // ---------------------------------------------------------------------------
 function updateStats(routeData, eventsData) {
-  const lineFeature = routeData?.features?.find(f => f.geometry?.type === 'LineString');
-  const coordinates = lineFeature?.geometry?.coordinates || [];
-  const points = coordinates.length;
+  const lineFeatures = (routeData?.features || []).filter(f => f.geometry?.type === 'LineString');
 
-  const distanceKmProp = Number(lineFeature?.properties?.distanceKm);
-  const distanceKm = Number.isFinite(distanceKmProp) ? distanceKmProp : totalDistanceKm(coordinates);
+  let points = 0;
+  let distanceKm = 0;
+  lineFeatures.forEach((feature) => {
+    const coordinates = feature?.geometry?.coordinates || [];
+    points += coordinates.length;
+    const distanceKmProp = Number(feature?.properties?.distanceKm);
+    distanceKm += Number.isFinite(distanceKmProp) ? distanceKmProp : totalDistanceKm(coordinates);
+  });
 
   // Find max day
   const maxDay = eventsData?.features?.reduce((max, f) => {
@@ -359,13 +364,13 @@ function fitToData(routeData, eventsData) {
   const bounds = new mapboxgl.LngLatBounds();
   let hasPoints = false;
 
-  const lineFeature = routeData?.features?.find(f => f.geometry?.type === 'LineString');
-  if (lineFeature) {
+  const lineFeatures = (routeData?.features || []).filter(f => f.geometry?.type === 'LineString');
+  lineFeatures.forEach((lineFeature) => {
     lineFeature.geometry.coordinates.forEach(coord => {
       bounds.extend(coord);
       hasPoints = true;
     });
-  }
+  });
 
   eventsData?.features?.forEach(f => {
     bounds.extend(f.geometry.coordinates);
@@ -425,6 +430,31 @@ async function fetchJSON(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status} loading ${url}`);
   return resp.json();
+}
+
+async function loadRouteData() {
+  const manifest = await fetchJSON('route-files.json');
+  const routeFiles = Array.isArray(manifest?.tracks)
+    ? manifest.tracks.map(track => track.geojson).filter(Boolean)
+    : [];
+
+  if (routeFiles.length === 0) {
+    throw new Error('route-files.json did not include any track files.');
+  }
+
+  const settled = await Promise.allSettled(routeFiles.map(file => fetchJSON(file)));
+  const collections = settled
+    .filter(result => result.status === 'fulfilled')
+    .map(result => result.value);
+
+  if (collections.length === 0) {
+    throw new Error('No route GeoJSON files could be loaded.');
+  }
+
+  return {
+    type: 'FeatureCollection',
+    features: collections.flatMap(collection => collection.features || []),
+  };
 }
 
 function hideLoading() {

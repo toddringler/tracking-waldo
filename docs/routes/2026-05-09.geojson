@@ -4,11 +4,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Waldo Expedition Route",
-        "description": "GPS track exported from Gaia GPS",
-        "generated": "2026-05-13T02:24:06.934Z",
-        "pointCount": 6050,
-        "distanceKm": 1353.407
+        "name": "Waldo Expedition Route — 2026-05-09",
+        "description": "GPS track exported from Gaia GPS (2026-05-09.gpx)",
+        "sourceFile": "2026-05-09.gpx",
+        "generated": "2026-05-13T02:32:07.118Z",
+        "pointCount": 6036,
+        "distanceKm": 212.834
       },
       "geometry": {
         "type": "LineString",
@@ -30192,93 +30193,7 @@
             -140.979664,
             64.073297,
             1335.2
-          ],
-          [
-            -149.9003,
-            61.2181,
-            30
-          ],
-          [
-            -149.5,
-            61.35,
-            120
-          ],
-          [
-            -149.12,
-            61.57,
-            180
-          ],
-          [
-            -148.9,
-            61.72,
-            250
-          ],
-          [
-            -148.5,
-            62,
-            320
-          ],
-          [
-            -148.1,
-            62.35,
-            400
-          ],
-          [
-            -147.8,
-            62.7,
-            460
-          ],
-          [
-            -147.5,
-            63.08,
-            520
-          ],
-          [
-            -147.2,
-            63.45,
-            580
-          ],
-          [
-            -148.9167,
-            63.7333,
-            640
-          ],
-          [
-            -149,
-            64,
-            700
-          ],
-          [
-            -149.5,
-            64.2,
-            660
-          ],
-          [
-            -149.8,
-            64.5,
-            580
-          ],
-          [
-            -147.7222,
-            64.8431,
-            135
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "updated": "2026-05-13T02:24:06.935Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -147.7222,
-          64.8431,
-          135
         ]
       }
     }
