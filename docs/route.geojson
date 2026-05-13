@@ -6,7 +6,7 @@
       "properties": {
         "name": "Waldo Expedition Route",
         "description": "GPS track exported from Gaia GPS",
-        "generated": "2026-05-11T02:37:49.974Z",
+        "generated": "2026-05-13T02:24:06.934Z",
         "pointCount": 6050,
         "distanceKm": 1353.407
       },
@@ -30271,7 +30271,7 @@
       "properties": {
         "name": "Last Known Position",
         "type": "current-position",
-        "updated": "2026-05-11T02:37:49.974Z"
+        "updated": "2026-05-13T02:24:06.935Z"
       },
       "geometry": {
         "type": "Point",

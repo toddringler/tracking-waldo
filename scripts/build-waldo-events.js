@@ -4,7 +4,7 @@
  *
  * Reads all *.json files from /data/events/
  * Converts each event into a GeoJSON Point Feature
- * Outputs /public/waldo-events.geojson
+ * Outputs /docs/waldo-events.geojson
  */
 
 'use strict';
@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 
 const EVENTS_DIR = path.join(__dirname, '..', 'data', 'events');
-const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'waldo-events.geojson');
+const OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'waldo-events.geojson');
 
 const VALID_TYPES = new Set(['fuel', 'camp', 'sighting', 'incident', 'ferry']);
 const VALID_MOODS = new Set(['optimistic', 'cautious', 'concerned', 'content', 'feral']);

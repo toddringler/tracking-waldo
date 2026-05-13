@@ -9,7 +9,7 @@
 
 // ---------------------------------------------------------------------------
 // Mapbox token
-// Set your token in public/config.js (see that file for instructions).
+// Set your token in docs/config.js (see that file for instructions).
 // ---------------------------------------------------------------------------
 const MAPBOX_TOKEN =
   (window.WALDO_CONFIG && window.WALDO_CONFIG.mapboxToken) ||

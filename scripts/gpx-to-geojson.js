@@ -4,7 +4,7 @@
  *
  * Reads all *.gpx files from /data/tracks/
  * Parses track points and converts to a GeoJSON LineString
- * Outputs /public/route.geojson
+ * Outputs /docs/route.geojson
  */
 
 'use strict';
@@ -14,7 +14,7 @@ const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 
 const TRACKS_DIR = path.join(__dirname, '..', 'data', 'tracks');
-const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'route.geojson');
+const OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'route.geojson');
 
 function haversineDistanceKm(a, b) {
   const toRad = deg => (deg * Math.PI) / 180;
