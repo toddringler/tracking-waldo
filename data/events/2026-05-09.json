@@ -1,0 +1,15 @@
+{
+  "day": 12,
+  "date": "2026-05-09",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 62.220309,
+      "lon": -148.286693,
+      "title": "suspicious grizzly",
+      "thought": "gravel keeps the world going round",
+      "mood": "cautious",
+      "status": "i prefer gravel. to each their own"
+    }
+  ]
+}

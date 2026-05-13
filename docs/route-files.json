@@ -1,12 +1,6 @@
 {
-  "generated": "2026-05-13T02:32:07.116Z",
+  "generated": "2026-05-13T02:52:59.193Z",
   "tracks": [
-    {
-      "sourceFile": "2026-05-09.gpx",
-      "geojson": "routes/2026-05-09.geojson",
-      "pointCount": 6036,
-      "distanceKm": 212.834
-    },
     {
       "sourceFile": "sample-track.gpx",
       "geojson": "routes/sample-track.geojson",
