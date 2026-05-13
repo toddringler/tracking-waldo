@@ -3,8 +3,8 @@
  * Script 1: GPX → GeoJSON
  *
  * Reads all *.gpx files from /data/tracks/
- * Parses track points and converts to a GeoJSON LineString
- * Outputs /docs/route.geojson
+ * Parses track points and converts each GPX into its own GeoJSON file
+ * Outputs /docs/routes/*.geojson and /docs/route-files.json
  */
 
 'use strict';
@@ -14,7 +14,9 @@ const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 
 const TRACKS_DIR = path.join(__dirname, '..', 'data', 'tracks');
-const OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'route.geojson');
+const ROUTES_DIR = path.join(__dirname, '..', 'docs', 'routes');
+const INDEX_FILE = path.join(__dirname, '..', 'docs', 'route-files.json');
+const LEGACY_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'route.geojson');
 
 function haversineDistanceKm(a, b) {
   const toRad = deg => (deg * Math.PI) / 180;
@@ -99,62 +101,111 @@ function main() {
     console.warn('No GPX files found in', TRACKS_DIR);
   }
 
-  let allCoordinates = [];
+  if (!fs.existsSync(ROUTES_DIR)) {
+    fs.mkdirSync(ROUTES_DIR, { recursive: true });
+  }
 
+  // Remove stale per-track outputs so deleted GPX files do not linger in docs/routes.
+  fs.readdirSync(ROUTES_DIR)
+    .filter(name => name.toLowerCase().endsWith('.geojson'))
+    .forEach((name) => {
+      fs.unlinkSync(path.join(ROUTES_DIR, name));
+    });
+
+  // Remove legacy merged route artifact.
+  if (fs.existsSync(LEGACY_OUTPUT_FILE)) {
+    fs.unlinkSync(LEGACY_OUTPUT_FILE);
+    console.log(`Removed legacy artifact: ${path.relative(path.join(__dirname, '..'), LEGACY_OUTPUT_FILE)}`);
+  }
+
+  const parsedTracks = [];
   for (const file of gpxFiles) {
     console.log(`Processing: ${path.basename(file)}`);
     const coords = parseGpxFile(file);
     console.log(`  → ${coords.length} track points`);
-    allCoordinates = allCoordinates.concat(coords);
+    parsedTracks.push({ file, coords });
   }
 
-  const totalKm = totalDistanceKm(allCoordinates);
+  let totalPoints = 0;
+  let totalKm = 0;
 
-  const geojson = {
-    type: 'FeatureCollection',
-    features: [
-      {
+  const latestTrackWithCoords = (() => {
+    for (let i = parsedTracks.length - 1; i >= 0; i -= 1) {
+      if (parsedTracks[i].coords.length > 0) return i;
+    }
+    return -1;
+  })();
+
+  const manifest = {
+    generated: new Date().toISOString(),
+    tracks: [],
+  };
+
+  parsedTracks.forEach((track, index) => {
+    const sourceFile = path.basename(track.file);
+    const fileStem = path.basename(track.file, path.extname(track.file));
+    const outputName = `${fileStem}.geojson`;
+    const outputPath = path.join(ROUTES_DIR, outputName);
+
+    const coords = track.coords;
+    const trackDistanceKm = totalDistanceKm(coords);
+    totalPoints += coords.length;
+    totalKm += trackDistanceKm;
+
+    const geojson = {
+      type: 'FeatureCollection',
+      features: [],
+    };
+
+    if (coords.length > 0) {
+      geojson.features.push({
         type: 'Feature',
         properties: {
-          name: 'Waldo Expedition Route',
-          description: 'GPS track exported from Gaia GPS',
+          name: `Waldo Expedition Route — ${fileStem}`,
+          description: `GPS track exported from Gaia GPS (${sourceFile})`,
+          sourceFile,
           generated: new Date().toISOString(),
-          pointCount: allCoordinates.length,
-          distanceKm: Number(totalKm.toFixed(3)),
+          pointCount: coords.length,
+          distanceKm: Number(trackDistanceKm.toFixed(3)),
         },
         geometry: {
           type: 'LineString',
-          coordinates: allCoordinates,
+          coordinates: coords,
         },
-      },
-    ],
-  };
+      });
+    }
 
-  // Also expose the last known position as a separate feature
-  if (allCoordinates.length > 0) {
-    const last = allCoordinates[allCoordinates.length - 1];
-    geojson.features.push({
-      type: 'Feature',
-      properties: {
-        name: 'Last Known Position',
-        type: 'current-position',
-        updated: new Date().toISOString(),
-      },
-      geometry: {
-        type: 'Point',
-        coordinates: last,
-      },
+    if (index === latestTrackWithCoords && coords.length > 0) {
+      const last = coords[coords.length - 1];
+      geojson.features.push({
+        type: 'Feature',
+        properties: {
+          name: 'Last Known Position',
+          type: 'current-position',
+          sourceFile,
+          updated: new Date().toISOString(),
+        },
+        geometry: {
+          type: 'Point',
+          coordinates: last,
+        },
+      });
+    }
+
+    fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2));
+    manifest.tracks.push({
+      sourceFile,
+      geojson: `routes/${outputName}`,
+      pointCount: coords.length,
+      distanceKm: Number(trackDistanceKm.toFixed(3)),
     });
-  }
 
-  const outputDir = path.dirname(OUTPUT_FILE);
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
-  }
+    console.log(`  Output: ${path.relative(path.join(__dirname, '..'), outputPath)}`);
+  });
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(geojson, null, 2));
-  console.log(`\nOutput: ${OUTPUT_FILE}`);
-  console.log(`Total track points: ${allCoordinates.length}`);
+  fs.writeFileSync(INDEX_FILE, JSON.stringify(manifest, null, 2));
+  console.log(`\nOutput: ${INDEX_FILE}`);
+  console.log(`Total track points: ${totalPoints}`);
   console.log(`Total distance: ${totalKm.toFixed(3)} km`);
 }
 

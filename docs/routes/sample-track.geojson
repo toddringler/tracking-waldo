@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Waldo Expedition Route — sample-track",
+        "description": "GPS track exported from Gaia GPS (sample-track.gpx)",
+        "sourceFile": "sample-track.gpx",
+        "generated": "2026-05-13T02:32:07.120Z",
+        "pointCount": 14,
+        "distanceKm": 585.885
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -149.9003,
+            61.2181,
+            30
+          ],
+          [
+            -149.5,
+            61.35,
+            120
+          ],
+          [
+            -149.12,
+            61.57,
+            180
+          ],
+          [
+            -148.9,
+            61.72,
+            250
+          ],
+          [
+            -148.5,
+            62,
+            320
+          ],
+          [
+            -148.1,
+            62.35,
+            400
+          ],
+          [
+            -147.8,
+            62.7,
+            460
+          ],
+          [
+            -147.5,
+            63.08,
+            520
+          ],
+          [
+            -147.2,
+            63.45,
+            580
+          ],
+          [
+            -148.9167,
+            63.7333,
+            640
+          ],
+          [
+            -149,
+            64,
+            700
+          ],
+          [
+            -149.5,
+            64.2,
+            660
+          ],
+          [
+            -149.8,
+            64.5,
+            580
+          ],
+          [
+            -147.7222,
+            64.8431,
+            135
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Last Known Position",
+        "type": "current-position",
+        "sourceFile": "sample-track.gpx",
+        "updated": "2026-05-13T02:32:07.120Z"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -147.7222,
+          64.8431,
+          135
+        ]
+      }
+    }
+  ]
+}
