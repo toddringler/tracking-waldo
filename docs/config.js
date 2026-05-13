@@ -12,5 +12,5 @@
  */
 
 window.WALDO_CONFIG = {
-  mapboxToken: 'YOUR_MAPBOX_PUBLIC_TOKEN_HERE',
+  mapboxToken: 'pk.eyJ1IjoidGFjby1vdmVybGFuZGVyIiwiYSI6ImNtcDNlNXVybDA5cGsycXEwaXI5cmJlOG4ifQ.95tSflS1qgBy8pjXyjsc3A',
 };
