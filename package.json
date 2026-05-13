@@ -6,7 +6,7 @@
     "gpx": "node scripts/gpx-to-geojson.js",
     "events": "node scripts/build-waldo-events.js",
     "build": "npm run gpx && npm run events && node scripts/build-site.js",
-    "start": "npx serve public"
+    "start": "npx serve docs"
   },
   "engines": {
     "node": ">=16"

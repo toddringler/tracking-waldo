@@ -23,8 +23,7 @@ The site is deployed at: `https://toddringler.github.io/tracking-waldo/`
 /data/tracks/        ← GPX files from Gaia GPS (truth layer)
 /data/events/        ← Daily JSON event logs (narrative layer)
 /scripts/            ← Node.js build pipeline
-/public/             ← Frontend source files
-/docs/               ← GitHub Pages deployment root (auto-generated)
+/docs/               ← Frontend source files and GitHub Pages deployment root
 ```
 
 ---
@@ -39,7 +38,7 @@ npm install
 
 ### 2. Configure Mapbox token
 
-Edit `public/config.js` and replace `YOUR_MAPBOX_PUBLIC_TOKEN_HERE` with your [Mapbox public token](https://account.mapbox.com/).
+Edit `docs/config.js` and replace `YOUR_MAPBOX_PUBLIC_TOKEN_HERE` with your [Mapbox public token](https://account.mapbox.com/).
 
 > Mapbox public tokens are designed for client-side use. Restrict yours to your GitHub Pages domain in the Mapbox dashboard.
 
@@ -82,9 +81,9 @@ npm run build
 ```
 
 This runs three scripts:
-1. `gpx-to-geojson.js` — converts GPX tracks → `public/route.geojson`
-2. `build-waldo-events.js` — converts event JSONs → `public/waldo-events.geojson`
-3. `build-site.js` — copies `public/` → `docs/` for GitHub Pages
+1. `gpx-to-geojson.js` — converts GPX tracks → `docs/route.geojson`
+2. `build-waldo-events.js` — converts event JSONs → `docs/waldo-events.geojson`
+3. `build-site.js` — finalizes `docs/` for GitHub Pages
 
 ### 6. Deploy
 
