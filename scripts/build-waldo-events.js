@@ -15,6 +15,25 @@ const path = require('path');
 const EVENTS_DIR = path.join(__dirname, '..', 'data', 'events');
 const OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'waldo-events.geojson');
 
+function getDeltaSeconds() {
+  const raw = process.env.DELTA_SECONDS;
+  if (raw === undefined || raw === '') return null;
+
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    console.warn(`Ignoring invalid DELTA_SECONDS value: ${raw}`);
+    return null;
+  }
+
+  return Math.floor(parsed);
+}
+
+function shouldIncludeByMtime(filePath, cutoffMs) {
+  if (cutoffMs === null) return true;
+  const stat = fs.statSync(filePath);
+  return stat.mtimeMs <= cutoffMs;
+}
+
 const VALID_TYPES = new Set(['fuel', 'camp', 'sighting', 'incident', 'ferry']);
 const VALID_MOODS = new Set(['optimistic', 'cautious', 'concerned', 'content', 'feral']);
 
@@ -88,13 +107,21 @@ function main() {
     process.exit(1);
   }
 
+  const deltaSeconds = getDeltaSeconds();
+  const cutoffMs = deltaSeconds === null ? null : Date.now() - (deltaSeconds * 1000);
+
   const jsonFiles = fs.readdirSync(EVENTS_DIR)
     .filter(f => f.toLowerCase().endsWith('.json'))
+    .filter((f) => shouldIncludeByMtime(path.join(EVENTS_DIR, f), cutoffMs))
     .sort()
     .map(f => path.join(EVENTS_DIR, f));
 
   if (jsonFiles.length === 0) {
     console.warn('No event JSON files found in', EVENTS_DIR);
+  }
+
+  if (deltaSeconds !== null) {
+    console.log(`Using mtime filter: include files modified at or before now - ${deltaSeconds}s`);
   }
 
   let allFeatures = [];

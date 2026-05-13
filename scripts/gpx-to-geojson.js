@@ -18,6 +18,25 @@ const ROUTES_DIR = path.join(__dirname, '..', 'docs', 'routes');
 const INDEX_FILE = path.join(__dirname, '..', 'docs', 'route-files.json');
 const LEGACY_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'route.geojson');
 
+function getDeltaSeconds() {
+  const raw = process.env.DELTA_SECONDS;
+  if (raw === undefined || raw === '') return null;
+
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    console.warn(`Ignoring invalid DELTA_SECONDS value: ${raw}`);
+    return null;
+  }
+
+  return Math.floor(parsed);
+}
+
+function shouldIncludeByMtime(filePath, cutoffMs) {
+  if (cutoffMs === null) return true;
+  const stat = fs.statSync(filePath);
+  return stat.mtimeMs <= cutoffMs;
+}
+
 function haversineDistanceKm(a, b) {
   const toRad = deg => (deg * Math.PI) / 180;
   const [lon1, lat1] = a;
@@ -92,13 +111,21 @@ function main() {
     process.exit(1);
   }
 
+  const deltaSeconds = getDeltaSeconds();
+  const cutoffMs = deltaSeconds === null ? null : Date.now() - (deltaSeconds * 1000);
+
   const gpxFiles = fs.readdirSync(TRACKS_DIR)
     .filter(f => f.toLowerCase().endsWith('.gpx'))
+    .filter((f) => shouldIncludeByMtime(path.join(TRACKS_DIR, f), cutoffMs))
     .sort()
     .map(f => path.join(TRACKS_DIR, f));
 
   if (gpxFiles.length === 0) {
     console.warn('No GPX files found in', TRACKS_DIR);
+  }
+
+  if (deltaSeconds !== null) {
+    console.log(`Using mtime filter: include files modified at or before now - ${deltaSeconds}s`);
   }
 
   if (!fs.existsSync(ROUTES_DIR)) {

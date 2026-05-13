@@ -81,9 +81,15 @@ npm run build
 ```
 
 This runs three scripts:
-1. `gpx-to-geojson.js` — converts GPX tracks → `docs/route.geojson`
+1. `gpx-to-geojson.js` — converts each GPX track → `docs/routes/*.geojson` and writes `docs/route-files.json`
 2. `build-waldo-events.js` — converts event JSONs → `docs/waldo-events.geojson`
 3. `build-site.js` — finalizes `docs/` for GitHub Pages
+
+Optional mtime cutoff filtering:
+```bash
+DELTA_SECONDS=200000 npm run build
+```
+When `DELTA_SECONDS` is set, files newer than `now - DELTA_SECONDS` are ignored.
 
 ### 6. Deploy
 
