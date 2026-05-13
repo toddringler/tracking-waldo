@@ -94,6 +94,8 @@ function processEventFile(filePath) {
         thought: event.thought || '',
         mood: event.mood || '',
         status: event.status || '',
+        photoFilename: event.photoFilename || '',
+        photoCaption: event.photoCaption || '',
       },
     });
   });

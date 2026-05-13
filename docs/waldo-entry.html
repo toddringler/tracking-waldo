@@ -120,6 +120,20 @@
           placeholder="e.g. Fuel: 28 gal @ $5.45/gal. Road: passable." />
       </div>
 
+      <!-- Optional Photo -->
+      <div class="form-group">
+        <label class="form-label" for="f-photo-filename">Photo Filename (optional)</label>
+        <input type="text" id="f-photo-filename" class="form-control"
+          placeholder="e.g. waldo-at-river.jpg" />
+        <div class="coords-hint">Files are expected at <code>/events/photos/&lt;filename&gt;</code>.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="f-photo-caption">Photo Caption (optional)</label>
+        <input type="text" id="f-photo-caption" class="form-control"
+          placeholder="e.g. Camp setup at the river bluff." />
+      </div>
+
       <!-- Actions -->
       <div style="display:flex;gap:10px;margin-top:8px;">
         <button class="btn btn-accent" id="btn-generate" style="flex:1;">Generate JSON</button>
@@ -225,6 +239,8 @@
       const mood  = document.getElementById('f-mood').value;
       const thought = document.getElementById('f-thought').value.trim();
       const status  = document.getElementById('f-status').value.trim();
+      const photoFilename = document.getElementById('f-photo-filename').value.trim();
+      const photoCaption = document.getElementById('f-photo-caption').value.trim();
 
       const errors = [];
       if (!clickedLat || !clickedLon) errors.push('• Click the map to set coordinates.');
@@ -246,6 +262,13 @@
         mood,
         status,
       };
+
+      if (photoFilename) {
+        event.photoFilename = photoFilename;
+      }
+      if (photoCaption) {
+        event.photoCaption = photoCaption;
+      }
 
       const obj = {
         day,
@@ -286,6 +309,8 @@
       document.getElementById('f-mood').value = '';
       document.getElementById('f-thought').value = '';
       document.getElementById('f-status').value = '';
+      document.getElementById('f-photo-filename').value = '';
+      document.getElementById('f-photo-caption').value = '';
       document.getElementById('json-output').textContent = '// JSON will appear here after you click "Generate JSON"';
     });
 

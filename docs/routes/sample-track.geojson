@@ -7,7 +7,7 @@
         "name": "Waldo Expedition Route — sample-track",
         "description": "GPS track exported from Gaia GPS (sample-track.gpx)",
         "sourceFile": "sample-track.gpx",
-        "generated": "2026-05-13T02:52:59.194Z",
+        "generated": "2026-05-13T03:16:11.917Z",
         "pointCount": 14,
         "distanceKm": 585.885
       },
@@ -93,7 +93,7 @@
         "name": "Last Known Position",
         "type": "current-position",
         "sourceFile": "sample-track.gpx",
-        "updated": "2026-05-13T02:52:59.194Z"
+        "updated": "2026-05-13T03:16:11.917Z"
       },
       "geometry": {
         "type": "Point",
