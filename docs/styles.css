@@ -920,7 +920,8 @@ textarea.form-control {
   }
 
   #sidebar {
-    width: 100%;
+    width: 75vw;
+    max-width: calc(100vw - 44px);
   }
 
   #entry-layout {
