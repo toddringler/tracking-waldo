@@ -144,13 +144,13 @@ function addRouteLayer(data) {
     layout: {
       'symbol-placement': 'line',
       'symbol-spacing': 120,
-      'icon-image': 'arrow',
-      'icon-size': 0.6,
-      'icon-rotate': 90,
-      'icon-rotation-alignment': 'map',
-      'icon-allow-overlap': true,
+      'text-field': '▶',
+      'text-size': 14,
+      'text-rotation-alignment': 'map',
+      'text-keep-upright': false,
+      'text-allow-overlap': true,
     },
-    paint: { 'icon-color': '#f0a500', 'icon-opacity': 0.7 },
+    paint: { 'text-color': '#f0a500', 'text-opacity': 0.7 },
   });
 }
 
