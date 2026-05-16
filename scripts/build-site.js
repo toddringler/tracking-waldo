@@ -14,6 +14,10 @@ const path = require('path');
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 const EVENT_PHOTOS_SOURCE_DIR = path.join(__dirname, '..', 'data', 'events', 'photos');
 const EVENT_PHOTOS_DEST_DIR = path.join(DOCS_DIR, 'events', 'photos');
+const ORIGIN_STORY_SOURCE_FILE = path.join(__dirname, '..', 'background', 'Origin Story', 'waldo_origin_story.md');
+const ORIGIN_STORY_DEST_FILE = path.join(DOCS_DIR, 'waldo-origin-story.md');
+const ORIGIN_STORY_IMAGE_SOURCE_FILE = path.join(__dirname, '..', 'background', 'Origin Story', 'waldo.roams.png');
+const ORIGIN_STORY_IMAGE_DEST_FILE = path.join(DOCS_DIR, 'background', 'waldo.roams.png');
 
 function copyRecursive(src, dest) {
   const stat = fs.statSync(src);
@@ -53,6 +57,17 @@ function main() {
     clearDirectoryContents(EVENT_PHOTOS_DEST_DIR);
     copyRecursive(EVENT_PHOTOS_SOURCE_DIR, EVENT_PHOTOS_DEST_DIR);
     console.log('  Synced: data/events/photos → docs/events/photos');
+  }
+
+  // Publish origin story markdown for the in-page popup.
+  if (fs.existsSync(ORIGIN_STORY_SOURCE_FILE)) {
+    copyRecursive(ORIGIN_STORY_SOURCE_FILE, ORIGIN_STORY_DEST_FILE);
+    console.log('  Synced: background/Origin Story/waldo_origin_story.md → docs/waldo-origin-story.md');
+  }
+
+  if (fs.existsSync(ORIGIN_STORY_IMAGE_SOURCE_FILE)) {
+    copyRecursive(ORIGIN_STORY_IMAGE_SOURCE_FILE, ORIGIN_STORY_IMAGE_DEST_FILE);
+    console.log('  Synced: background/Origin Story/waldo.roams.png → docs/background/waldo.roams.png');
   }
 
   // Write a .nojekyll file so GitHub Pages doesn't try to process the files

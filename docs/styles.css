@@ -804,6 +804,57 @@ textarea.form-control {
   scrollbar-gutter: stable;
 }
 
+#text-demo-content .origin-story-inline-image {
+  float: right;
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  margin: 0 0 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #0f141b;
+}
+
+#text-demo-content h1,
+#text-demo-content h2,
+#text-demo-content h3,
+#text-demo-content h4,
+#text-demo-content h5,
+#text-demo-content h6 {
+  color: var(--color-accent);
+  line-height: 1.3;
+  margin: 1.1em 0 0.55em;
+}
+
+#text-demo-content p {
+  margin: 0 0 0.9em;
+  white-space: pre-line;
+}
+
+#text-demo-content ul {
+  margin: 0 0 0.9em 1.25em;
+  padding: 0;
+}
+
+#text-demo-content li {
+  margin: 0 0 0.4em;
+}
+
+#text-demo-content blockquote {
+  margin: 0 0 0.9em;
+  padding: 0.1em 0 0.1em 0.75em;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+#text-demo-content > :first-child {
+  margin-top: 0;
+}
+
+#text-demo-content > :last-child {
+  margin-bottom: 0;
+}
+
 #text-demo-content:focus {
   border-color: var(--color-accent);
 }
@@ -950,5 +1001,13 @@ textarea.form-control {
 
   #text-demo-content {
     min-height: 0;
+  }
+
+  #text-demo-content .origin-story-inline-image {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 12px 0;
   }
 }
