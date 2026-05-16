@@ -936,7 +936,14 @@ textarea.form-control {
 
 @media (max-width: 900px) {
   #text-demo-drawer {
-    width: 100%;
+    width: 100vw !important;
+    min-width: 0;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border-left: none;
+    box-shadow: none;
   }
 }
 
@@ -946,68 +953,73 @@ textarea.form-control {
     padding: 0 10px;
     gap: 8px;
   }
-
   #header-brand {
     flex: 1 1 auto;
     min-width: 0;
   }
-
   #header-brand > div {
     min-width: 0;
   }
-
   #header-icon {
     display: none;
   }
-
   #header h1 {
     font-size: 13px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
   #header-subtitle {
     display: none;
   }
-
   #sidebar {
     width: 75vw;
     max-width: calc(100vw - 44px);
   }
-
   #entry-layout {
     grid-template-columns: 1fr;
     grid-template-rows: 40vh 1fr;
     height: auto;
     min-height: calc(100vh - var(--header-height));
   }
-
   #entry-map {
     height: 40vh;
     position: relative;
     top: 0;
   }
-
   #entry-form-panel {
     height: auto;
   }
-
   #text-demo-header,
   #text-demo-body,
   #text-demo-footer {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
-
+  #text-demo-drawer {
+    width: 100vw !important;
+    min-width: 0;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border-left: none;
+    box-shadow: none;
+  }
   #text-demo-content {
     min-height: 0;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
-
   #text-demo-content .origin-story-inline-image {
     float: none;
     display: block;
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     margin: 0 0 12px 0;
+    height: auto;
+    box-sizing: border-box;
   }
 }
