@@ -36,6 +36,7 @@ const MOOD_EMOJI = {
 };
 
 const PHOTO_BASE_PATH = 'events/photos/';
+const MIGRATION_2025_TRACK_PATH = 'supplement/full_track_2025.geojson';
 
 // ---------------------------------------------------------------------------
 // State
@@ -43,8 +44,10 @@ const PHOTO_BASE_PATH = 'events/photos/';
 let map;
 let routeVisible = true;
 let eventsVisible = true;
+let migration2025Visible = false;
 let routeData = null;
 let eventsData = null;
+let migration2025Data = null;
 let loadingTimeoutId = null;
 const LOADING_TIMEOUT_MS = 15000;
 
@@ -78,6 +81,8 @@ function initMap() {
 // Map load — fetch data and add layers
 // ---------------------------------------------------------------------------
 async function onMapLoad() {
+  let migrationTrackLoadError = null;
+
   try {
     [routeData, eventsData] = await Promise.all([
       loadRouteData(),
@@ -89,9 +94,21 @@ async function onMapLoad() {
     return;
   }
 
+  try {
+    migration2025Data = await fetchJSON(MIGRATION_2025_TRACK_PATH);
+  } catch (err) {
+    migrationTrackLoadError = err;
+  }
+
   addRouteLayer(routeData);
   addEventsLayer(eventsData);
   addCurrentPositionLayer(routeData);
+  addMigration2025Layer(migration2025Data);
+  updateMigration2025ToggleButton(migration2025Data !== null);
+
+  if (migrationTrackLoadError) {
+    console.warn(`2025 migration track unavailable: ${migrationTrackLoadError.message}`);
+  }
 
   populateSidebar(eventsData);
   updateStats(routeData, eventsData);
@@ -213,6 +230,35 @@ function addEventsLayer(data) {
   });
   map.on('mouseleave', 'events-circle', () => {
     map.getCanvas().style.cursor = '';
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Add optional 2025 migration layer
+// ---------------------------------------------------------------------------
+function addMigration2025Layer(data) {
+  if (!data || !Array.isArray(data.features) || data.features.length === 0) {
+    return;
+  }
+
+  map.addSource('migration-2025', { type: 'geojson', data });
+
+  map.addLayer({
+    id: 'migration-2025-line',
+    type: 'line',
+    source: 'migration-2025',
+    filter: ['==', ['geometry-type'], 'LineString'],
+    layout: {
+      'line-join': 'round',
+      'line-cap': 'round',
+      visibility: migration2025Visible ? 'visible' : 'none',
+    },
+    paint: {
+      'line-color': '#000000',
+      'line-width': ['interpolate', ['linear'], ['zoom'], 4, 1.5, 10, 3.5],
+      'line-opacity': 0.85,
+      'line-dasharray': [2, 1.5],
+    },
   });
 }
 
@@ -437,6 +483,18 @@ document.getElementById('btn-fit').addEventListener('click', () => {
   if (routeData && eventsData) fitToData(routeData, eventsData);
 });
 
+const migrationToggleBtn = document.getElementById('toggle-2025-track-btn');
+if (migrationToggleBtn) {
+  migrationToggleBtn.addEventListener('click', function () {
+    if (!map.getLayer('migration-2025-line')) return;
+
+    migration2025Visible = !migration2025Visible;
+    map.setLayoutProperty('migration-2025-line', 'visibility', migration2025Visible ? 'visible' : 'none');
+    this.classList.toggle('toggle-on', migration2025Visible);
+    this.setAttribute('aria-pressed', String(migration2025Visible));
+  });
+}
+
 // ---------------------------------------------------------------------------
 // Utilities
 // ---------------------------------------------------------------------------
@@ -444,6 +502,18 @@ async function fetchJSON(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status} loading ${url}`);
   return resp.json();
+}
+
+function updateMigration2025ToggleButton(isAvailable) {
+  const btn = document.getElementById('toggle-2025-track-btn');
+  if (!btn) return;
+
+  btn.disabled = !isAvailable;
+  btn.classList.toggle('toggle-on', migration2025Visible);
+  btn.setAttribute('aria-pressed', String(migration2025Visible));
+  btn.title = isAvailable
+    ? 'Toggle 2025 migration track'
+    : '2025 migration track unavailable';
 }
 
 async function loadRouteData() {

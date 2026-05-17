@@ -213,10 +213,25 @@ html, body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-.text-demo-footer-btn {
+.migration-track-footer-btn {
   margin-left: auto;
+  flex-shrink: 0;
+}
+
+.text-demo-footer-btn {
   margin-right: 12px;
   flex-shrink: 0;
+}
+
+.btn.toggle-on {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #000;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .stat-item {

@@ -5,7 +5,8 @@
   "scripts": {
     "gpx": "node scripts/gpx-to-geojson.js",
     "events": "node scripts/build-waldo-events.js",
-    "build": "npm run gpx && npm run events && node scripts/build-site.js",
+    "fulltrack2025": "node scripts/build-2025-full-track.js",
+    "build": "npm run gpx && npm run events && npm run fulltrack2025 && node scripts/build-site.js",
     "start": "npx serve docs"
   },
   "engines": {
