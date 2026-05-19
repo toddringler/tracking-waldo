@@ -12,6 +12,15 @@
       "status": "all systems nominal.",
       "photoFilename": "d001-wegmans.jpeg",
       "photoCaption": "One last stop before saying goodbye to Wegmans until the fall."
+    },
+    {
+      "type": "camp",
+      "lat": 41.549626,
+      "lon": -82.807579,
+      "title": "Camp — East Harbor",
+      "thought": "Too much pavement. Too many cars. Need to find some gravel on the way north. Soon.",
+      "mood": "concerned",
+      "status": "above 32C all day. too hot. where is the Arctic?"
     }
   ]
 }

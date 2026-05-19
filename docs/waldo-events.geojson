@@ -15,14 +15,35 @@
         "date": "2026-05-18",
         "type": "fuel",
         "title": "Fuel stop — Wegmans!",
-        "thought": "The Navigator is very soft. Ten kilometers from launch ... and he is already stopping for food.",
+        "thought": "The Navigator is very soft. Probably too soft for whats ahead. Ten kilometers from launch ... and he is already stopping for food.",
         "mood": "optimistic",
         "status": "all systems nominal.",
         "photoFilename": "d001-wegmans.jpeg",
         "photoCaption": "One last stop before saying goodbye to Wegmans until the fall."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.807579,
+          41.549626
+        ]
+      },
+      "properties": {
+        "day": 1,
+        "date": "2026-05-18",
+        "type": "camp",
+        "title": "Camp — East Harbor",
+        "thought": "Too much pavement. Too many cars. Need to find some gravel on the way north. Soon.",
+        "mood": "concerned",
+        "status": "above 32C all day. too hot. where is the Arctic?",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
     }
   ],
-  "generated": "2026-05-19T00:28:41.612Z",
-  "totalEvents": 1
+  "generated": "2026-05-19T00:45:29.178Z",
+  "totalEvents": 2
 }
