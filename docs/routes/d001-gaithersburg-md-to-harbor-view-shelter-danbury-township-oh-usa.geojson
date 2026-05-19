@@ -7,7 +7,7 @@
         "name": "Waldo Expedition Route — d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa",
         "description": "GPS track exported from Gaia GPS (d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx)",
         "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
-        "generated": "2026-05-19T00:06:45.247Z",
+        "generated": "2026-05-19T00:28:41.477Z",
         "pointCount": 7192,
         "distanceKm": 675.874
       },
@@ -35983,7 +35983,7 @@
         "name": "Last Known Position",
         "type": "current-position",
         "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
-        "updated": "2026-05-19T00:06:45.247Z"
+        "updated": "2026-05-19T00:28:41.477Z"
       },
       "geometry": {
         "type": "Point",

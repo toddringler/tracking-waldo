@@ -1,0 +1,17 @@
+{
+  "day": 1,
+  "date": "2026-05-18",
+  "events": [
+    {
+      "type": "fuel",
+      "lat": 39.199141,
+      "lon": -77.256213,
+      "title": "Fuel stop — Wegmans!",
+      "thought": "The Navigator is very soft. Probably too soft for whats ahead. Ten kilometers from launch ... and he is already stopping for food.",
+      "mood": "optimistic",
+      "status": "all systems nominal.",
+      "photoFilename": "d001-wegmans.jpeg",
+      "photoCaption": "One last stop before saying goodbye to Wegmans until the fall."
+    }
+  ]
+}
