@@ -1,11 +1,17 @@
 {
-  "generated": "2026-05-19T00:47:17.319Z",
+  "generated": "2026-05-20T00:15:20.655Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
       "geojson": "routes/d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.geojson",
       "pointCount": 7070,
       "distanceKm": 672.877
+    },
+    {
+      "sourceFile": "d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa.gpx",
+      "geojson": "routes/d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa.geojson",
+      "pointCount": 3985,
+      "distanceKm": 484.469
     }
   ]
 }
