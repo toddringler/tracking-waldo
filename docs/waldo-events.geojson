@@ -42,8 +42,29 @@
         "photoFilename": "",
         "photoCaption": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.913408,
+          44.641217
+        ]
+      },
+      "properties": {
+        "day": 2,
+        "date": "2026-05-19",
+        "type": "camp",
+        "title": "Buttercup Wild Camp",
+        "thought": "vibe is good. day 2 and i've already found -- with a bit of help from The Navigator -- sweet double track and an empty wild camp.",
+        "mood": "optimistic",
+        "status": "system nominal. Navigator in a tizzy. something about ticks everywhere. i wonder about him.",
+        "photoFilename": "d002-camp-road.jpeg",
+        "photoCaption": "sweet Michigan double track on way into camp"
+      }
     }
   ],
-  "generated": "2026-05-20T00:15:20.788Z",
-  "totalEvents": 2
+  "generated": "2026-05-20T00:32:20.317Z",
+  "totalEvents": 3
 }

@@ -7,7 +7,7 @@
         "name": "Waldo Expedition Route — d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa",
         "description": "GPS track exported from Gaia GPS (d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa.gpx)",
         "sourceFile": "d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa.gpx",
-        "generated": "2026-05-20T00:15:20.658Z",
+        "generated": "2026-05-20T00:32:20.186Z",
         "pointCount": 3985,
         "distanceKm": 484.469
       },
@@ -19948,7 +19948,7 @@
         "name": "Last Known Position",
         "type": "current-position",
         "sourceFile": "d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa.gpx",
-        "updated": "2026-05-20T00:15:20.658Z"
+        "updated": "2026-05-20T00:32:20.186Z"
       },
       "geometry": {
         "type": "Point",
