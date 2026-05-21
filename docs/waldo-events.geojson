@@ -14,7 +14,7 @@
         "day": 1,
         "date": "2026-05-18",
         "type": "fuel",
-        "title": "Fuel stop — Wegmans!",
+        "title": "Fuel stop — Wegmans?",
         "thought": "The Navigator is very soft. Probably too soft for whats ahead. Ten kilometers from launch ... and he is already stopping for food.",
         "mood": "optimistic",
         "status": "all systems nominal.",
@@ -63,8 +63,29 @@
         "photoFilename": "d002-camp-road.jpeg",
         "photoCaption": "sweet Michigan double track on way into camp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.043182,
+          44.653792
+        ]
+      },
+      "properties": {
+        "day": 3,
+        "date": "2026-05-20",
+        "type": "sighting",
+        "title": "Grace makes her migration 2026 debut",
+        "thought": "Day 3 and already left behind.",
+        "mood": "concerned",
+        "status": "too nice of a day for rest.",
+        "photoFilename": "d003-grace-debut.jpeg",
+        "photoCaption": "Grace exited to shuttle the Kodiak upstream and go for a float."
+      }
     }
   ],
-  "generated": "2026-05-20T00:32:20.317Z",
-  "totalEvents": 3
+  "generated": "2026-05-21T02:27:28.353Z",
+  "totalEvents": 4
 }

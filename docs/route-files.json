@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-20T00:32:20.182Z",
+  "generated": "2026-05-21T02:27:28.211Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -12,6 +12,12 @@
       "geojson": "routes/d002-harbor-view-shelter-danbury-township-oh-to-buttercup-campground-mentor-township-mi-usa.geojson",
       "pointCount": 3985,
       "distanceKm": 484.469
+    },
+    {
+      "sourceFile": "d003-buttercup-campground-to-glennie-creek-mentor-township-mi-usa.gpx",
+      "geojson": "routes/d003-buttercup-campground-to-glennie-creek-mentor-township-mi-usa.geojson",
+      "pointCount": 1740,
+      "distanceKm": 33.071
     }
   ]
 }

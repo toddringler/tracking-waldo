@@ -1,0 +1,17 @@
+{
+  "day": 3,
+  "date": "2026-05-20",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 44.653792,
+      "lon": -84.043182,
+      "title": "Grace makes her migration 2026 debut",
+      "thought": "Day 3 and already left behind.",
+      "mood": "concerned",
+      "status": "too nice of a day for rest.",
+      "photoFilename": "d003-grace-debut.jpeg",
+      "photoCaption": "Grace exited to shuttle the Kodiak upstream and go for a float."
+    }
+  ]
+}
