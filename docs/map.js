@@ -412,7 +412,7 @@ function updateStats(routeData, eventsData) {
   document.getElementById('stat-day').textContent = maxDay > 0 ? maxDay : '—';
   document.getElementById('stat-distance').textContent =
     distanceKm > 0
-      ? `${distanceKm.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} km`
+      ? `${Math.round(distanceKm).toLocaleString()} km`
       : '—';
   document.getElementById('stat-points').textContent = points.toLocaleString();
 }
