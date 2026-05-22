@@ -56,7 +56,7 @@
         "day": 2,
         "date": "2026-05-19",
         "type": "camp",
-        "title": "Buttercup Wild Camp",
+        "title": "Buttercup Wild Camp-day 2 and 3",
         "thought": "vibe is good. day 2 and i've already found -- with a bit of help from The Navigator -- sweet double track and an empty wild camp.",
         "mood": "optimistic",
         "status": "system nominal. Navigator in a tizzy. something about ticks everywhere. i wonder about him.",
@@ -84,8 +84,29 @@
         "photoFilename": "d003-grace-debut.jpeg",
         "photoCaption": "Grace exited to shuttle the Kodiak upstream and go for a float."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.70672,
+          46.96602
+        ]
+      },
+      "properties": {
+        "day": 4,
+        "date": "2026-05-21",
+        "type": "camp",
+        "title": "Tranquility found",
+        "thought": "Evening like this make it easy to love Canada",
+        "mood": "optimistic",
+        "status": "refigrator on the fritz. will monitor.",
+        "photoFilename": "d004-pancake-bay.jpeg",
+        "photoCaption": "Lake Superior from Pancake Bay."
+      }
     }
   ],
-  "generated": "2026-05-21T02:27:28.353Z",
-  "totalEvents": 4
+  "generated": "2026-05-22T02:15:01.913Z",
+  "totalEvents": 5
 }

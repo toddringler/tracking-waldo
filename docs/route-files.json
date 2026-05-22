@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-21T02:27:28.211Z",
+  "generated": "2026-05-22T02:15:01.772Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -18,6 +18,12 @@
       "geojson": "routes/d003-buttercup-campground-to-glennie-creek-mentor-township-mi-usa.geojson",
       "pointCount": 1740,
       "distanceKm": 33.071
+    },
+    {
+      "sourceFile": "d004-buttercup-campground-mentor-township-mi-usa-to-black-creek-on-canada.gpx",
+      "geojson": "routes/d004-buttercup-campground-mentor-township-mi-usa-to-black-creek-on-canada.geojson",
+      "pointCount": 4262,
+      "distanceKm": 403.519
     }
   ]
 }
