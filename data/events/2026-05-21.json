@@ -1,0 +1,17 @@
+{
+  "day": 4,
+  "date": "2026-05-21",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 46.96602,
+      "lon": -84.70672,
+      "title": "Tranquility found",
+      "thought": "Evenings like this make it easy to love Canada",
+      "mood": "optimistic",
+      "status": "refigrator on the fritz. will monitor.",
+      "photoFilename": "d004-pancake-bay.jpeg",
+      "photoCaption": "Lake Superior from Pancake Bay."
+    }
+  ]
+}
