@@ -82,7 +82,7 @@
         "mood": "concerned",
         "status": "too nice of a day for rest.",
         "photoFilename": "d003-grace-debut.jpeg",
-        "photoCaption": "Grace exited to shuttle the Kodiak upstream and go for a float."
+        "photoCaption": "Grace excited to get some mud on her tires, then enjoy a relaxing float."
       }
     },
     {
@@ -99,14 +99,35 @@
         "date": "2026-05-21",
         "type": "camp",
         "title": "Tranquility found",
-        "thought": "Evening like this make it easy to love Canada",
+        "thought": "Evenings like this make it easy to love Canada",
         "mood": "optimistic",
         "status": "refigrator on the fritz. will monitor.",
         "photoFilename": "d004-pancake-bay.jpeg",
         "photoCaption": "Lake Superior from Pancake Bay."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.63945,
+          47.35417
+        ]
+      },
+      "properties": {
+        "day": 5,
+        "date": "2026-05-22",
+        "type": "sighting",
+        "title": "Steelhead sighting",
+        "thought": "Steelhead fishing means gravel. So I am a fan.",
+        "mood": "optimistic",
+        "status": "refigrator still on the fritz.",
+        "photoFilename": "d005-agawa-steelhead.jpeg",
+        "photoCaption": "An Agawa River steelhead, caught and released by The Navigator."
+      }
     }
   ],
-  "generated": "2026-05-22T02:15:01.913Z",
-  "totalEvents": 5
+  "generated": "2026-05-23T02:09:35.168Z",
+  "totalEvents": 6
 }

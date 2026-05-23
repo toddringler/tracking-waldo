@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-22T02:15:01.772Z",
+  "generated": "2026-05-23T02:09:35.031Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -24,6 +24,12 @@
       "geojson": "routes/d004-buttercup-campground-mentor-township-mi-usa-to-black-creek-on-canada.geojson",
       "pointCount": 4262,
       "distanceKm": 403.519
+    },
+    {
+      "sourceFile": "d005-black-creek-to-agawa-bay-campground-on-canada.gpx",
+      "geojson": "routes/d005-black-creek-to-agawa-bay-campground-on-canada.geojson",
+      "pointCount": 1799,
+      "distanceKm": 85.94
     }
   ]
 }
