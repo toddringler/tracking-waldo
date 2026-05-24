@@ -132,6 +132,27 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -84.6112,
+          47.32468
+        ]
+      },
+      "properties": {
+        "day": 5,
+        "date": "2026-05-22",
+        "type": "camp",
+        "title": "Camp at Agawa Bay, day 5 and 6",
+        "thought": "Setting up camp for the night.",
+        "mood": "content",
+        "status": "refigrator still on the fritz.",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -84.63864,
           47.35364
         ]
@@ -149,6 +170,6 @@
       }
     }
   ],
-  "generated": "2026-05-24T00:47:38.096Z",
-  "totalEvents": 7
+  "generated": "2026-05-24T00:53:58.194Z",
+  "totalEvents": 8
 }

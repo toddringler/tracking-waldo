@@ -12,6 +12,15 @@
       "status": "refigrator still on the fritz.",
       "photoFilename": "d005-agawa-steelhead.jpeg",
       "photoCaption": "An Agawa River steelhead, caught and released by The Navigator."
+    },
+    {
+      "type": "camp",
+      "lat": 47.32468,
+      "lon": -84.61120,
+      "title": "Camp at Agawa Bay, day 5 and 6",
+      "thought": "Setting up camp for the night.",
+      "mood": "content",
+      "status": "refigrator still on the fritz."
     }
   ]
 }

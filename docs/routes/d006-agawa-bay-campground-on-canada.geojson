@@ -7,7 +7,7 @@
         "name": "Waldo Expedition Route — d006-agawa-bay-campground-on-canada",
         "description": "GPS track exported from Gaia GPS (d006-agawa-bay-campground-on-canada.gpx)",
         "sourceFile": "d006-agawa-bay-campground-on-canada.gpx",
-        "generated": "2026-05-24T00:47:37.823Z",
+        "generated": "2026-05-24T00:53:58.060Z",
         "pointCount": 748,
         "distanceKm": 14.082
       },
@@ -3763,7 +3763,7 @@
         "name": "Last Known Position",
         "type": "current-position",
         "sourceFile": "d006-agawa-bay-campground-on-canada.gpx",
-        "updated": "2026-05-24T00:47:37.823Z"
+        "updated": "2026-05-24T00:53:58.060Z"
       },
       "geometry": {
         "type": "Point",
