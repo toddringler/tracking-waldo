@@ -7,7 +7,7 @@
         "name": "Waldo Expedition Route — d005-black-creek-to-agawa-bay-campground-on-canada",
         "description": "GPS track exported from Gaia GPS (d005-black-creek-to-agawa-bay-campground-on-canada.gpx)",
         "sourceFile": "d005-black-creek-to-agawa-bay-campground-on-canada.gpx",
-        "generated": "2026-05-23T02:09:35.038Z",
+        "generated": "2026-05-24T00:47:37.823Z",
         "pointCount": 1799,
         "distanceKm": 85.94
       },
@@ -9009,23 +9009,6 @@
             47.327169,
             190.5
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d005-black-creek-to-agawa-bay-campground-on-canada.gpx",
-        "updated": "2026-05-23T02:09:35.038Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -84.611716,
-          47.327169,
-          190.5
         ]
       }
     }

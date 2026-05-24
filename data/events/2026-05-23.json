@@ -1,0 +1,17 @@
+{
+  "day": 6,
+  "date": "2026-05-23",
+  "events": [
+    {
+      "type": "sighting", 
+      "lat": 47.35364,
+      "lon": -84.63864,
+      "title": "Coaster sighting",
+      "thought": "And brook trout fishing also leads to large amounts of gravel consumption. So I am still a fan.",
+      "mood": "optimistic",
+      "status": "refigrator still on the fritz.",
+      "photoFilename": "d006-coaster.jpeg",
+      "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator."
+    }
+  ]
+}
