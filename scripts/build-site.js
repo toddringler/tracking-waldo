@@ -14,6 +14,8 @@ const path = require('path');
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 const EVENT_PHOTOS_SOURCE_DIR = path.join(__dirname, '..', 'data', 'events', 'photos');
 const EVENT_PHOTOS_DEST_DIR = path.join(DOCS_DIR, 'events', 'photos');
+const EVENT_VIDEOS_SOURCE_DIR = path.join(__dirname, '..', 'data', 'events', 'videos');
+const EVENT_VIDEOS_DEST_DIR = path.join(DOCS_DIR, 'events', 'videos');
 const ORIGIN_STORY_SOURCE_FILE = path.join(__dirname, '..', 'background', 'Origin Story', 'waldo_origin_story.md');
 const ORIGIN_STORY_DEST_FILE = path.join(DOCS_DIR, 'waldo-origin-story.md');
 const ORIGIN_STORY_IMAGE_SOURCE_FILE = path.join(__dirname, '..', 'background', 'Origin Story', 'waldo.roams.png');
@@ -57,6 +59,15 @@ function main() {
     clearDirectoryContents(EVENT_PHOTOS_DEST_DIR);
     copyRecursive(EVENT_PHOTOS_SOURCE_DIR, EVENT_PHOTOS_DEST_DIR);
     console.log('  Synced: data/events/photos → docs/events/photos');
+  }
+
+  if (fs.existsSync(EVENT_VIDEOS_SOURCE_DIR)) {
+    if (!fs.existsSync(EVENT_VIDEOS_DEST_DIR)) {
+      fs.mkdirSync(EVENT_VIDEOS_DEST_DIR, { recursive: true });
+    }
+    clearDirectoryContents(EVENT_VIDEOS_DEST_DIR);
+    copyRecursive(EVENT_VIDEOS_SOURCE_DIR, EVENT_VIDEOS_DEST_DIR);
+    console.log('  Synced: data/events/videos → docs/events/videos');
   }
 
   // Publish origin story markdown for the in-page popup.

@@ -1,0 +1,16 @@
+{
+  "day": 7,
+  "date": "2026-05-24",
+  "events": [
+    {
+      "type": "sighting", 
+      "lat": 47.3537,
+      "lon": -84.63864,
+      "title": "Another coaster sighting",
+      "mood": "optimistic",
+      "status": "refigrator thinking about working again.",
+      "photoFilename": "d007-coaster.mov",
+      "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator."
+    }
+  ]
+}

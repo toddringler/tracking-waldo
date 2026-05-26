@@ -36,6 +36,7 @@ const MOOD_EMOJI = {
 };
 
 const PHOTO_BASE_PATH = 'events/photos/';
+const VIDEO_BASE_PATH = 'events/videos/';
 const MIGRATION_2025_TRACK_PATH = 'supplement/full_track_2025.geojson';
 
 // ---------------------------------------------------------------------------
@@ -314,7 +315,8 @@ function showEventPopup(coords, props) {
   const config = EVENT_CONFIG[props.type] || { color: '#f0a500', emoji: '📍', label: props.type };
   const moodEmoji = MOOD_EMOJI[props.mood] || '';
   const photoFilename = normalizePhotoFilename(props.photoFilename);
-  const photoUrl = photoFilename ? `${PHOTO_BASE_PATH}${encodeURIComponent(photoFilename)}` : '';
+  const media = buildEventMedia(photoFilename);
+  const mediaLabel = media.kind === 'video' ? '🎬 View Video' : '📷 View Photo';
   const photoCaption = props.photoCaption || props.title || 'Event photo';
 
   const html = `
@@ -330,7 +332,7 @@ function showEventPopup(coords, props) {
       <div class="popup-meta">
         ${props.mood ? `<span class="popup-mood">${moodEmoji} ${escapeHtml(props.mood)}</span>` : ''}
       </div>
-      ${photoUrl ? `<button class="btn popup-photo-btn" data-photo-url="${escapeHtml(photoUrl)}" data-photo-caption="${escapeHtml(photoCaption)}">📷 View Photo</button>` : ''}
+      ${media.url ? `<button class="btn popup-photo-btn" data-photo-url="${escapeHtml(media.url)}" data-photo-kind="${escapeHtml(media.kind)}" data-photo-caption="${escapeHtml(photoCaption)}">${mediaLabel}</button>` : ''}
       ${props.status ? `<div class="popup-status">${escapeHtml(props.status)}</div>` : ''}
     </div>
   `;
@@ -344,7 +346,11 @@ function showEventPopup(coords, props) {
   const photoBtn = popupEl.querySelector('.popup-photo-btn');
   if (photoBtn) {
     photoBtn.addEventListener('click', () => {
-      openPhotoOverlay(photoBtn.dataset.photoUrl || '', photoBtn.dataset.photoCaption || 'Event photo');
+      openPhotoOverlay(
+        photoBtn.dataset.photoUrl || '',
+        photoBtn.dataset.photoCaption || 'Event photo',
+        photoBtn.dataset.photoKind || 'image'
+      );
     });
   }
 }
@@ -573,21 +579,42 @@ function setupPhotoOverlay() {
   });
 }
 
-function openPhotoOverlay(url, caption) {
+function openPhotoOverlay(url, caption, mediaKind) {
   if (!url) return;
 
   const overlay = document.getElementById('photo-overlay');
   const image = document.getElementById('photo-overlay-image');
+  const video = document.getElementById('photo-overlay-video');
   const captionEl = document.getElementById('photo-overlay-caption');
 
-  if (!overlay || !image || !captionEl) return;
+  if (!overlay || !image || !video || !captionEl) return;
 
   captionEl.textContent = caption || '';
-  image.onerror = () => {
-    showError('Photo could not be loaded.');
-    closePhotoOverlay();
-  };
-  image.src = url;
+
+  if (mediaKind === 'video') {
+    image.src = '';
+    image.onerror = null;
+
+    video.style.display = 'block';
+    video.onerror = () => {
+      showError('Video could not be loaded.');
+      closePhotoOverlay();
+    };
+    video.src = url;
+    video.load();
+  } else {
+    video.pause();
+    video.currentTime = 0;
+    video.src = '';
+    video.onerror = null;
+    video.style.display = 'none';
+
+    image.onerror = () => {
+      showError('Photo could not be loaded.');
+      closePhotoOverlay();
+    };
+    image.src = url;
+  }
 
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
@@ -596,13 +623,21 @@ function openPhotoOverlay(url, caption) {
 function closePhotoOverlay() {
   const overlay = document.getElementById('photo-overlay');
   const image = document.getElementById('photo-overlay-image');
+  const video = document.getElementById('photo-overlay-video');
 
-  if (!overlay || !image) return;
+  if (!overlay || !image || !video) return;
 
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
+
   image.src = '';
   image.onerror = null;
+
+  video.pause();
+  video.currentTime = 0;
+  video.src = '';
+  video.onerror = null;
+  video.style.display = 'none';
 }
 
 function normalizePhotoFilename(value) {
@@ -610,6 +645,19 @@ function normalizePhotoFilename(value) {
   const trimmed = String(value).trim();
   if (!trimmed) return '';
   return trimmed.replace(/^.*[\\/]/, '');
+}
+
+function buildEventMedia(filename) {
+  if (!filename) return { url: '', kind: 'image' };
+
+  const ext = filename.toLowerCase().match(/\.([a-z0-9]+)$/)?.[1] || '';
+  const isVideo = ext === 'mov' || ext === 'mp4' || ext === 'm4v' || ext === 'webm' || ext === 'ogg';
+  const basePath = isVideo ? VIDEO_BASE_PATH : PHOTO_BASE_PATH;
+
+  return {
+    url: `${basePath}${encodeURIComponent(filename)}`,
+    kind: isVideo ? 'video' : 'image',
+  };
 }
 
 function escapeHtml(str) {
