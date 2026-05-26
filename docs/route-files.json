@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-26T01:03:20.471Z",
+  "generated": "2026-05-26T23:10:18.502Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -48,6 +48,12 @@
       "geojson": "routes/d008-agawa-bay-campground-to-thunder-bay-on-canada.geojson",
       "pointCount": 4472,
       "distanceKm": 329.247
+    },
+    {
+      "sourceFile": "d009-thunder-bay-to-steel-river-on-canada.gpx",
+      "geojson": "routes/d009-thunder-bay-to-steel-river-on-canada.geojson",
+      "pointCount": 1566,
+      "distanceKm": 30.046
     }
   ]
 }

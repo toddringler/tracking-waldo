@@ -1,0 +1,16 @@
+{
+  "day": 9,
+  "date": "2026-05-26",
+  "events": [
+    {
+      "type": "camp", 
+      "lat": 48.81426,
+      "lon": -86.86236,
+      "title": "another wild camp on the Steel River",
+      "mood": "content",
+      "status": "refigrator is not working. reason unknown.",
+      "photoFilename": "d009-steel-river.jpeg",
+      "photoCaption": "Sun is out. It's warm. No bugs. Yet."
+    }
+  ]
+}

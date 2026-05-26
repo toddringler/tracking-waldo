@@ -210,8 +210,29 @@
         "photoFilename": "d008-steel-camp.jpeg",
         "photoCaption": "A perfect evening. Cool. Some sun. No bugs."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.86236,
+          48.81426
+        ]
+      },
+      "properties": {
+        "day": 9,
+        "date": "2026-05-26",
+        "type": "camp",
+        "title": "another wild camp on the Steel River",
+        "thought": "",
+        "mood": "content",
+        "status": "refigrator is not working. reason unknown.",
+        "photoFilename": "d009-steel-river.jpeg",
+        "photoCaption": "Sun is out. It's warm. No bugs. Yet."
+      }
     }
   ],
-  "generated": "2026-05-26T01:03:20.754Z",
-  "totalEvents": 10
+  "generated": "2026-05-26T23:09:58.319Z",
+  "totalEvents": 11
 }

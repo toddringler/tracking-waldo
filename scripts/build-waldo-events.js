@@ -15,6 +15,32 @@ const path = require('path');
 const EVENTS_DIR = path.join(__dirname, '..', 'data', 'events');
 const OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'waldo-events.geojson');
 
+function latestMtimeIso(filePaths) {
+  if (!Array.isArray(filePaths) || filePaths.length === 0) return null;
+
+  let latest = 0;
+  for (const filePath of filePaths) {
+    const mtimeMs = fs.statSync(filePath).mtimeMs;
+    if (mtimeMs > latest) latest = mtimeMs;
+  }
+
+  if (latest <= 0) return null;
+  return new Date(latest).toISOString();
+}
+
+function writeJsonIfChanged(filePath, value) {
+  const next = `${JSON.stringify(value, null, 2)}\n`;
+  if (fs.existsSync(filePath)) {
+    const current = fs.readFileSync(filePath, 'utf8');
+    if (current === next) {
+      return false;
+    }
+  }
+
+  fs.writeFileSync(filePath, next);
+  return true;
+}
+
 function getDeltaSeconds() {
   const raw = process.env.DELTA_SECONDS;
   if (raw === undefined || raw === '') return null;
@@ -138,7 +164,7 @@ function main() {
   const geojson = {
     type: 'FeatureCollection',
     features: allFeatures,
-    generated: new Date().toISOString(),
+    generated: latestMtimeIso(jsonFiles),
     totalEvents: allFeatures.length,
   };
 
@@ -147,7 +173,7 @@ function main() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(geojson, null, 2));
+  writeJsonIfChanged(OUTPUT_FILE, geojson);
   console.log(`\nOutput: ${OUTPUT_FILE}`);
   console.log(`Total events: ${allFeatures.length}`);
 }

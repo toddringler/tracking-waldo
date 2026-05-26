@@ -18,6 +18,36 @@ const ROUTES_DIR = path.join(__dirname, '..', 'docs', 'routes');
 const INDEX_FILE = path.join(__dirname, '..', 'docs', 'route-files.json');
 const LEGACY_OUTPUT_FILE = path.join(__dirname, '..', 'docs', 'route.geojson');
 
+function fileMtimeIso(filePath) {
+  return fs.statSync(filePath).mtime.toISOString();
+}
+
+function latestMtimeIso(filePaths) {
+  if (!Array.isArray(filePaths) || filePaths.length === 0) return null;
+
+  let latest = 0;
+  for (const filePath of filePaths) {
+    const mtimeMs = fs.statSync(filePath).mtimeMs;
+    if (mtimeMs > latest) latest = mtimeMs;
+  }
+
+  if (latest <= 0) return null;
+  return new Date(latest).toISOString();
+}
+
+function writeJsonIfChanged(filePath, value) {
+  const next = `${JSON.stringify(value, null, 2)}\n`;
+  if (fs.existsSync(filePath)) {
+    const current = fs.readFileSync(filePath, 'utf8');
+    if (current === next) {
+      return false;
+    }
+  }
+
+  fs.writeFileSync(filePath, next);
+  return true;
+}
+
 function getDeltaSeconds() {
   const raw = process.env.DELTA_SECONDS;
   if (raw === undefined || raw === '') return null;
@@ -164,12 +194,13 @@ function main() {
   })();
 
   const manifest = {
-    generated: new Date().toISOString(),
+    generated: latestMtimeIso(gpxFiles),
     tracks: [],
   };
 
   parsedTracks.forEach((track, index) => {
     const sourceFile = path.basename(track.file);
+    const sourceMtime = fileMtimeIso(track.file);
     const fileStem = path.basename(track.file, path.extname(track.file));
     const outputName = `${fileStem}.geojson`;
     const outputPath = path.join(ROUTES_DIR, outputName);
@@ -191,7 +222,7 @@ function main() {
           name: `Waldo Expedition Route — ${fileStem}`,
           description: `GPS track exported from Gaia GPS (${sourceFile})`,
           sourceFile,
-          generated: new Date().toISOString(),
+          generated: sourceMtime,
           pointCount: coords.length,
           distanceKm: Number(trackDistanceKm.toFixed(3)),
         },
@@ -210,7 +241,7 @@ function main() {
           name: 'Last Known Position',
           type: 'current-position',
           sourceFile,
-          updated: new Date().toISOString(),
+          updated: sourceMtime,
         },
         geometry: {
           type: 'Point',
@@ -219,7 +250,7 @@ function main() {
       });
     }
 
-    fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2));
+    writeJsonIfChanged(outputPath, geojson);
     manifest.tracks.push({
       sourceFile,
       geojson: `routes/${outputName}`,
@@ -230,7 +261,7 @@ function main() {
     console.log(`  Output: ${path.relative(path.join(__dirname, '..'), outputPath)}`);
   });
 
-  fs.writeFileSync(INDEX_FILE, JSON.stringify(manifest, null, 2));
+  writeJsonIfChanged(INDEX_FILE, manifest);
   console.log(`\nOutput: ${INDEX_FILE}`);
   console.log(`Total track points: ${totalPoints}`);
   console.log(`Total distance: ${totalKm.toFixed(3)} km`);

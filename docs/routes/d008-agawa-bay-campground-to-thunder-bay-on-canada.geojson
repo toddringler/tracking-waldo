@@ -7,7 +7,7 @@
         "name": "Waldo Expedition Route — d008-agawa-bay-campground-to-thunder-bay-on-canada",
         "description": "GPS track exported from Gaia GPS (d008-agawa-bay-campground-to-thunder-bay-on-canada.gpx)",
         "sourceFile": "d008-agawa-bay-campground-to-thunder-bay-on-canada.gpx",
-        "generated": "2026-05-26T01:03:20.479Z",
+        "generated": "2026-05-25T23:51:47.715Z",
         "pointCount": 4472,
         "distanceKm": 329.247
       },
@@ -22374,23 +22374,6 @@
             48.77769,
             203.3
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d008-agawa-bay-campground-to-thunder-bay-on-canada.gpx",
-        "updated": "2026-05-26T01:03:20.479Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.884973,
-          48.77769,
-          203.3
         ]
       }
     }
