@@ -231,8 +231,50 @@
         "photoFilename": "d009-steel-river.jpeg",
         "photoCaption": "Sun is out. It's warm. No bugs. Yet."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.87046166666667,
+          48.81479666666667
+        ]
+      },
+      "properties": {
+        "day": 10,
+        "date": "2026-05-27",
+        "type": "incident",
+        "title": "field repair stop",
+        "thought": "",
+        "mood": "cautious",
+        "status": "Completed field repair of Dometic CFX3. Resumed travel.",
+        "photoFilename": "d010-field-repair.jpeg",
+        "photoCaption": "Field repair in progress."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.86672166666666,
+          48.94506333333333
+        ]
+      },
+      "properties": {
+        "day": 10,
+        "date": "2026-05-27",
+        "type": "camp",
+        "title": "camp at Cypress River",
+        "thought": "",
+        "mood": "content",
+        "status": "Camp established and systems check complete.",
+        "photoFilename": "d010-cypress-river-camp.jpeg",
+        "photoCaption": "Cypress River camp setup for day 10."
+      }
     }
   ],
-  "generated": "2026-05-26T23:09:58.319Z",
-  "totalEvents": 11
+  "generated": "2026-05-28T00:40:10.814Z",
+  "totalEvents": 13
 }

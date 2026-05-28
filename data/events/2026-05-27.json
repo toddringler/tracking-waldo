@@ -1,0 +1,26 @@
+{
+  "day": 10,
+  "date": "2026-05-27",
+  "events": [
+    {
+      "type": "incident",
+      "lat": 48.81479666666667,
+      "lon": -86.87046166666667,
+      "title": "field repair stop",
+      "mood": "cautious",
+      "status": "Completed field repair of Dometic CFX3. Resumed travel.",
+      "photoFilename": "d010-field-repair.jpeg",
+      "photoCaption": "Field repair in progress."
+    },
+    {
+      "type": "camp",
+      "lat": 48.94506333333333,
+      "lon": -87.86672166666666,
+      "title": "camp at Cypress River",
+      "mood": "content",
+      "status": "Camp established and systems check complete.",
+      "photoFilename": "d010-cypress-river-camp.jpeg",
+      "photoCaption": "Cypress River camp setup for day 10."
+    }
+  ]
+}

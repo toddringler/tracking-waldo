@@ -7846,23 +7846,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d009-thunder-bay-to-steel-river-on-canada.gpx",
-        "updated": "2026-05-26T23:10:18.503Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.870435,
-          48.814801,
-          279.6
-        ]
-      }
     }
   ]
 }
