@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T00:31:53.030Z",
+  "generated": "2026-05-29T02:17:01.459Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -60,6 +60,12 @@
       "geojson": "routes/d010-steel-river-to-cypress-river.geojson",
       "pointCount": 2494,
       "distanceKm": 116.826
+    },
+    {
+      "sourceFile": "d011-thunder-bay-to-kaministiquia-river-oliver-paipoonge-on-canada.gpx",
+      "geojson": "routes/d011-thunder-bay-to-kaministiquia-river-oliver-paipoonge-on-canada.geojson",
+      "pointCount": 2999,
+      "distanceKm": 195.734
     }
   ]
 }

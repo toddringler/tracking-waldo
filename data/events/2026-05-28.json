@@ -1,0 +1,26 @@
+{
+  "day": 11,
+  "date": "2026-05-28",
+  "events": [
+    {
+      "type": "fishing",
+      "lat": 48.9483,
+      "lon": -87.85814666666667,
+      "title": "cypress river fishing",
+      "mood": "content",
+      "status": "Fished near Cypress River.",
+      "photoFilename": "d011-cypress-river.jpeg",
+      "photoCaption": "Cypress River."
+    },
+    {
+      "type": "sighting",
+      "lat": 48.5267,
+      "lon": -88.94289999999999,
+      "title": "carp spawning sighting",
+      "mood": "content",
+      "status": "Observed active carp spawning near shoreline.",
+      "photoFilename": "d011-carp-spawning.MOV",
+      "photoCaption": "Carp spawning activity captured on video."
+    }
+  ]
+}

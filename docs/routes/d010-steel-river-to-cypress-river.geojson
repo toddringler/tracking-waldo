@@ -12486,23 +12486,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d010-steel-river-to-cypress-river.gpx",
-        "updated": "2026-05-28T00:31:53.031Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -87.866683,
-          48.945083,
-          220.3
-        ]
-      }
     }
   ]
 }
