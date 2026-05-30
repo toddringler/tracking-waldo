@@ -1,0 +1,32 @@
+{
+  "day": 12,
+  "date": "2026-05-29",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 48.74516333333333,
+      "lon": -92.48104666666667,
+      "title": "moose sighting",
+      "mood": "content",
+      "status": "Moose spotted along the route in northern forest country."
+    },
+    {
+      "type": "sighting",
+      "lat": 48.62036333333333,
+      "lon": -95.1346195,
+      "title": "sow with coys sighting",
+      "mood": "cautious",
+      "status": "Observed a sow with cubs from a safe distance and continued on route.",
+      "photoFilename": "d012-sow-with-coys-sighting.jpeg",
+      "photoCaption": "Sow with cubs sighting on day 12."
+    },
+    {
+      "type": "camp",
+      "lat": 48.295979,
+      "lon": -95.849016,
+      "title": "Wild camp at edge of Agassiz National Wildlife Refuge",
+      "mood": "content",
+      "status": "Wild camp established for the night just outside of the refuge."
+    }
+  ]
+}

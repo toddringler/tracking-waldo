@@ -286,11 +286,11 @@
       "properties": {
         "day": 11,
         "date": "2026-05-28",
-        "type": "fishing",
+        "type": "sighting",
         "title": "cypress river fishing",
         "thought": "",
         "mood": "content",
-        "status": "Fished near Cypress River.",
+        "status": "The Navigator fished near Cypress River while I recharged the camper battery.",
         "photoFilename": "d011-cypress-river.jpeg",
         "photoCaption": "Cypress River."
       }
@@ -300,23 +300,86 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -88.9429,
-          48.5267
+          -89.62487,
+          48.40258
         ]
       },
       "properties": {
         "day": 11,
         "date": "2026-05-28",
-        "type": "sighting",
-        "title": "carp spawning sighting",
+        "type": "camp",
+        "title": "kakabeka falls camp",
         "thought": "",
         "mood": "content",
-        "status": "Observed active carp spawning near shoreline.",
-        "photoFilename": "d011-carp-spawning.MOV",
-        "photoCaption": "Carp spawning activity captured on video."
+        "status": "Set camp near Kakabeka Falls.",
+        "photoFilename": "d011-kakabeca-falls-camp.jpeg",
+        "photoCaption": "Camp near Kakabeka Falls."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.48104666666667,
+          48.74516333333333
+        ]
+      },
+      "properties": {
+        "day": 12,
+        "date": "2026-05-29",
+        "type": "sighting",
+        "title": "moose sighting",
+        "thought": "",
+        "mood": "content",
+        "status": "Moose spotted along the route in northern forest country.",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.1346195,
+          48.62036333333333
+        ]
+      },
+      "properties": {
+        "day": 12,
+        "date": "2026-05-29",
+        "type": "sighting",
+        "title": "sow with coys sighting",
+        "thought": "",
+        "mood": "cautious",
+        "status": "Observed a sow with cubs from a safe distance and continued on route.",
+        "photoFilename": "d012-sow-with-coys-sighting.jpeg",
+        "photoCaption": "Sow with cubs sighting on day 12."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.849016,
+          48.295979
+        ]
+      },
+      "properties": {
+        "day": 12,
+        "date": "2026-05-29",
+        "type": "camp",
+        "title": "Wild camp at edge of Agassiz National Wildlife Refuge",
+        "thought": "",
+        "mood": "content",
+        "status": "Wild camp established for the night just outside of the refuge.",
+        "photoFilename": "",
+        "photoCaption": ""
       }
     }
   ],
-  "generated": "2026-05-29T02:22:53.384Z",
-  "totalEvents": 15
+  "generated": "2026-05-30T02:40:17.590Z",
+  "totalEvents": 18
 }

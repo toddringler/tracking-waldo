@@ -15011,23 +15011,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d011-thunder-bay-to-kaministiquia-river-oliver-paipoonge-on-canada.gpx",
-        "updated": "2026-05-29T02:17:01.460Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -89.629953,
-          48.404807,
-          265.6
-        ]
-      }
     }
   ]
 }

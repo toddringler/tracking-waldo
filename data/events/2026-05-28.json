@@ -3,7 +3,7 @@
   "date": "2026-05-28",
   "events": [
     {
-      "type": "fishing",
+      "type": "sighting",
       "lat": 48.9483,
       "lon": -87.85814666666667,
       "title": "cypress river fishing",
@@ -13,14 +13,14 @@
       "photoCaption": "Cypress River."
     },
     {
-      "type": "sighting",
-      "lat": 48.5267,
-      "lon": -88.94289999999999,
-      "title": "carp spawning sighting",
+      "type": "camp",
+      "lat": 48.40258,
+      "lon": -89.62487,
+      "title": "kakabeka falls camp",
       "mood": "content",
-      "status": "Observed active carp spawning near shoreline.",
-      "photoFilename": "d011-carp-spawning.MOV",
-      "photoCaption": "Carp spawning activity captured on video."
+      "status": "Set camp near Kakabeka Falls.",
+      "photoFilename": "d011-kakabeca-falls-camp.jpeg",
+      "photoCaption": "Camp near Kakabeka Falls."
     }
   ]
 }

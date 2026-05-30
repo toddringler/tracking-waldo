@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T02:17:01.459Z",
+  "generated": "2026-05-30T02:18:17.610Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -66,6 +66,12 @@
       "geojson": "routes/d011-thunder-bay-to-kaministiquia-river-oliver-paipoonge-on-canada.geojson",
       "pointCount": 2999,
       "distanceKm": 195.734
+    },
+    {
+      "sourceFile": "d012-kaministiquia-river-oliver-paipoonge-on-canada-to-28488-290th-avenue-ne-goodridge-mn-usa.gpx",
+      "geojson": "routes/d012-kaministiquia-river-oliver-paipoonge-on-canada-to-28488-290th-avenue-ne-goodridge-mn-usa.geojson",
+      "pointCount": 5302,
+      "distanceKm": 585.809
     }
   ]
 }
