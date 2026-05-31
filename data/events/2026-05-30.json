@@ -1,0 +1,24 @@
+{
+  "day": 13,
+  "date": "2026-05-30",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 48.295944,
+      "lon": -95.848966,
+      "title": "Trumpeter swan sighting in Agassiz National Wildlife Refuge",
+      "mood": "content",
+      "status": "Departed from the Agassiz area and continued west on day 13.",
+      "photoFilename": "d013-agassiz.heic",
+      "photoCaption": "Day 13 start near Agassiz."
+    },
+    {
+      "type": "camp",
+      "lat": 48.242409,
+      "lon": -101.123789,
+      "title": "Camp near Surrey, ND",
+      "mood": "content",
+      "status": "Camp set at the end of day 13 for the night."
+    }
+  ]
+}

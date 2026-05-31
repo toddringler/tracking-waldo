@@ -378,8 +378,50 @@
         "photoFilename": "",
         "photoCaption": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.848966,
+          48.295944
+        ]
+      },
+      "properties": {
+        "day": 13,
+        "date": "2026-05-30",
+        "type": "sighting",
+        "title": "Trumpeter swan sighting in Agassiz National Wildlife Refuge",
+        "thought": "",
+        "mood": "content",
+        "status": "Departed from the Agassiz area and continued west on day 13.",
+        "photoFilename": "d013-agassiz.heic",
+        "photoCaption": "Day 13 start near Agassiz."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.123789,
+          48.242409
+        ]
+      },
+      "properties": {
+        "day": 13,
+        "date": "2026-05-30",
+        "type": "camp",
+        "title": "Camp near Surrey, ND",
+        "thought": "",
+        "mood": "content",
+        "status": "Camp set at the end of day 13 for the night.",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
     }
   ],
-  "generated": "2026-05-30T02:40:17.590Z",
-  "totalEvents": 18
+  "generated": "2026-05-31T02:58:44.925Z",
+  "totalEvents": 20
 }

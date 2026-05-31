@@ -26526,23 +26526,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d012-kaministiquia-river-oliver-paipoonge-on-canada-to-28488-290th-avenue-ne-goodridge-mn-usa.gpx",
-        "updated": "2026-05-30T02:18:17.610Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -95.849016,
-          48.295979,
-          354.9
-        ]
-      }
     }
   ]
 }
