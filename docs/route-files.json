@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-31T02:53:02.474Z",
+  "generated": "2026-06-01T00:19:24.039Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -78,6 +78,12 @@
       "geojson": "routes/d013-28488-290th-avenue-ne-goodridge-mn-to-436-4th-street-ne-surrey-nd-usa.geojson",
       "pointCount": 2110,
       "distanceKm": 471.796
+    },
+    {
+      "sourceFile": "d014-436-4th-street-ne-surrey-nd-to-dog-creek-garfield-county-mt-usa.gpx",
+      "geojson": "routes/d014-436-4th-street-ne-surrey-nd-to-dog-creek-garfield-county-mt-usa.geojson",
+      "pointCount": 3483,
+      "distanceKm": 647.297
     }
   ]
 }

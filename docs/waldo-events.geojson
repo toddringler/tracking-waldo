@@ -396,7 +396,7 @@
         "thought": "",
         "mood": "content",
         "status": "Departed from the Agassiz area and continued west on day 13.",
-        "photoFilename": "d013-agassiz.heic",
+        "photoFilename": "d013-agassiz.jpeg",
         "photoCaption": "Day 13 start near Agassiz."
       }
     },
@@ -420,8 +420,29 @@
         "photoFilename": "",
         "photoCaption": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.822826,
+          46.994428
+        ]
+      },
+      "properties": {
+        "day": 14,
+        "date": "2026-05-31",
+        "type": "camp",
+        "title": "Camp at Dog Creek on BLM land",
+        "thought": "",
+        "mood": "content",
+        "status": "Rainy. Windy. Cold. But camp set at the end of day 14 route.",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
     }
   ],
-  "generated": "2026-05-31T02:58:44.925Z",
-  "totalEvents": 20
+  "generated": "2026-06-01T00:44:40.389Z",
+  "totalEvents": 21
 }

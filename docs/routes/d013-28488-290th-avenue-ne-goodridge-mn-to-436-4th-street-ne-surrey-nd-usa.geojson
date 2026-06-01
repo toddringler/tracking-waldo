@@ -10566,23 +10566,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d013-28488-290th-avenue-ne-goodridge-mn-to-436-4th-street-ne-surrey-nd-usa.gpx",
-        "updated": "2026-05-31T02:53:02.474Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -101.123789,
-          48.242409,
-          493.2
-        ]
-      }
     }
   ]
 }

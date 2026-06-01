@@ -1,0 +1,14 @@
+{
+  "day": 14,
+  "date": "2026-05-31",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 46.994428,
+      "lon": -107.822826,
+      "title": "Camp at Dog Creek on BLM land",
+      "mood": "content",
+      "status": "Rainy. Windy. Cold. But camp set at the end of day 14 route."
+    }
+  ]
+}
