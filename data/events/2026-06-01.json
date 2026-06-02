@@ -1,0 +1,15 @@
+{
+  "day": 15,
+  "date": "2026-06-01",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 45.659762,
+      "lon": -111.190593,
+      "title": "Camp at Bozeman Hot Springs, MT",
+      "thought": "Overhead The Navigator talking to Overland Cruisers about a suspension upgrade. Starting to feel like Christmas.",
+      "mood": "content",
+      "status": "Camp set for the next three nights."
+    }
+  ]
+}
