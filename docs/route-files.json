@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-01T00:19:24.039Z",
+  "generated": "2026-06-05T03:42:43.923Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -84,6 +84,30 @@
       "geojson": "routes/d014-436-4th-street-ne-surrey-nd-to-dog-creek-garfield-county-mt-usa.geojson",
       "pointCount": 3483,
       "distanceKm": 647.297
+    },
+    {
+      "sourceFile": "d015-dog-creek-garfield-county-to-02s04e14ddb_01-well-four-corners-mt-usa.gpx",
+      "geojson": "routes/d015-dog-creek-garfield-county-to-02s04e14ddb_01-well-four-corners-mt-usa.geojson",
+      "pointCount": 3508,
+      "distanceKm": 424.003
+    },
+    {
+      "sourceFile": "d016-190-rock-road-gallatin-county-to-3815-azure-road-four-corners-mt-usa.gpx",
+      "geojson": "routes/d016-190-rock-road-gallatin-county-to-3815-azure-road-four-corners-mt-usa.geojson",
+      "pointCount": 1453,
+      "distanceKm": 30.493
+    },
+    {
+      "sourceFile": "d017-azure-road-to-609-pronghorn-trail-four-corners-mt-usa.gpx",
+      "geojson": "routes/d017-azure-road-to-609-pronghorn-trail-four-corners-mt-usa.geojson",
+      "pointCount": 1855,
+      "distanceKm": 40.671
+    },
+    {
+      "sourceFile": "d018-3825-azure-road-four-corners-to-2520-wylie-avenue-missoula-mt-usa.gpx",
+      "geojson": "routes/d018-3825-azure-road-four-corners-to-2520-wylie-avenue-missoula-mt-usa.geojson",
+      "pointCount": 4074,
+      "distanceKm": 363.481
     }
   ]
 }

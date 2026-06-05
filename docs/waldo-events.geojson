@@ -372,7 +372,7 @@
         "date": "2026-05-29",
         "type": "camp",
         "title": "Wild camp at edge of Agassiz National Wildlife Refuge",
-        "thought": "",
+        "thought": "Nearly 75 miles of gravel and dirt roads today.",
         "mood": "content",
         "status": "Wild camp established for the night just outside of the refuge.",
         "photoFilename": "",
@@ -414,7 +414,7 @@
         "date": "2026-05-30",
         "type": "camp",
         "title": "Camp near Surrey, ND",
-        "thought": "",
+        "thought": "Rode the tailwind for nearly the entire day!",
         "mood": "content",
         "status": "Camp set at the end of day 13 for the night.",
         "photoFilename": "",
@@ -435,14 +435,56 @@
         "date": "2026-05-31",
         "type": "camp",
         "title": "Camp at Dog Creek on BLM land",
-        "thought": "",
+        "thought": "The weather was challenging today, with rain, wind, and cold temperatures.",
         "mood": "cautious",
         "status": "Rainy. Windy. Cold. But camp set at the end of day 14 route.",
         "photoFilename": "",
         "photoCaption": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.190593,
+          45.659762
+        ]
+      },
+      "properties": {
+        "day": 15,
+        "date": "2026-06-01",
+        "type": "camp",
+        "title": "Camp at Bozeman Hot Springs, MT",
+        "thought": "Overhead The Navigator talking to Overland Cruisers about a suspension upgrade. Starting to feel like Christmas.",
+        "mood": "content",
+        "status": "Camp set for the next three nights.",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.969386,
+          46.888041
+        ]
+      },
+      "properties": {
+        "day": 18,
+        "date": "2026-06-04",
+        "type": "camp",
+        "title": "Camp in Missoula, MT",
+        "thought": "",
+        "mood": "content",
+        "status": "Camp set at the end of day 18 route.",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
     }
   ],
-  "generated": "2026-06-01T01:10:07.654Z",
-  "totalEvents": 21
+  "generated": "2026-06-05T03:53:12.315Z",
+  "totalEvents": 23
 }

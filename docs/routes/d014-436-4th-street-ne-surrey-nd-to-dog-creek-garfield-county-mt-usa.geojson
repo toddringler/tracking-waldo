@@ -17431,23 +17431,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d014-436-4th-street-ne-surrey-nd-to-dog-creek-garfield-county-mt-usa.gpx",
-        "updated": "2026-06-01T00:19:24.039Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -107.822826,
-          46.994428,
-          822.7
-        ]
-      }
     }
   ]
 }
