@@ -468,6 +468,27 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -111.213112,
+          45.796158
+        ]
+      },
+      "properties": {
+        "day": 18,
+        "date": "2026-06-04",
+        "type": "sighting",
+        "title": "Suspension upgrade at Overland Cruisers, Belgrade, MT",
+        "thought": "Dobinson MRR shocks and coils installed. The ride feels tighter, more planted, and ready for industrial-level gravel consumption.",
+        "mood": "optimistic",
+        "status": "Suspension upgraded.",
+        "photoFilename": "d018-overland-cruisers.jpeg",
+        "photoCaption": "New Dobinson MRR shocks and coils installed at Overland Cruisers."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -113.969386,
           46.888041
         ]
@@ -479,12 +500,12 @@
         "title": "Camp in Missoula, MT",
         "thought": "",
         "mood": "content",
-        "status": "Camp set at the end of day 18 route.",
+        "status": "Camp set in Missoula, MT for a few days.",
         "photoFilename": "",
         "photoCaption": ""
       }
     }
   ],
-  "generated": "2026-06-05T03:53:12.315Z",
-  "totalEvents": 23
+  "generated": "2026-06-05T17:40:29.484Z",
+  "totalEvents": 24
 }
