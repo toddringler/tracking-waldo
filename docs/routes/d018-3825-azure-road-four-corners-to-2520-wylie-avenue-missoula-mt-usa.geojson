@@ -20386,23 +20386,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d018-3825-azure-road-four-corners-to-2520-wylie-avenue-missoula-mt-usa.gpx",
-        "updated": "2026-06-05T03:42:08.497Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -113.969386,
-          46.888041,
-          1013.3
-        ]
-      }
     }
   ]
 }

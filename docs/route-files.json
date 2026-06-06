@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-05T03:42:43.923Z",
+  "generated": "2026-06-06T15:44:23.656Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -108,6 +108,12 @@
       "geojson": "routes/d018-3825-azure-road-four-corners-to-2520-wylie-avenue-missoula-mt-usa.geojson",
       "pointCount": 4074,
       "distanceKm": 363.481
+    },
+    {
+      "sourceFile": "d019-deer-creek-sneak.gpx",
+      "geojson": "routes/d019-deer-creek-sneak.geojson",
+      "pointCount": 10006,
+      "distanceKm": 50.367
     }
   ]
 }
