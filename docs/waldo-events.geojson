@@ -504,8 +504,29 @@
         "photoFilename": "",
         "photoCaption": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.89412712439584,
+          46.87158950345019
+        ]
+      },
+      "properties": {
+        "day": 19,
+        "date": "2026-06-05",
+        "type": "sighting",
+        "title": "overlooking old milton dam site during the Dear Creek Sneak bike ride with Andrew",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "",
+        "photoCaption": ""
+      }
     }
   ],
-  "generated": "2026-06-05T17:40:29.484Z",
-  "totalEvents": 24
+  "generated": "2026-06-06T16:21:40.852Z",
+  "totalEvents": 25
 }
