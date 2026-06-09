@@ -518,15 +518,57 @@
         "day": 19,
         "date": "2026-06-05",
         "type": "sighting",
-        "title": "overlooking old milton dam site during the Dear Creek Sneak bike ride with Andrew",
+        "title": "Taking a break at the old Milton Dam site during the Dear Creek Sneak bike ride with Andrew",
         "thought": "",
         "mood": "",
         "status": "",
         "photoFilename": "",
         "photoCaption": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.396632,
+          45.421412
+        ]
+      },
+      "properties": {
+        "day": 21,
+        "date": "2026-06-07",
+        "type": "camp",
+        "title": "Camp at rest stop along Rt 212 in South Dakota",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "d021-rest-stop.jpeg",
+        "photoCaption": "End of day 21."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.705772,
+          42.590116
+        ]
+      },
+      "properties": {
+        "day": 22,
+        "date": "2026-06-08",
+        "type": "camp",
+        "title": "Camp at Ponca State Park, NE",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "d022-ponca-state-park.jpeg",
+        "photoCaption": "End of day 22."
+      }
     }
   ],
-  "generated": "2026-06-06T16:21:40.852Z",
-  "totalEvents": 25
+  "generated": "2026-06-09T02:16:10.876Z",
+  "totalEvents": 27
 }

@@ -1,0 +1,14 @@
+{
+  "day": 21,
+  "date": "2026-06-07",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 45.421412,
+      "lon": -105.396632,
+      "title": "Camp at rest stop along Rt 212 in South Dakota",
+      "photoFilename": "d021-rest-stop.jpeg",
+      "photoCaption": "End of day 21."
+    }
+  ]
+}

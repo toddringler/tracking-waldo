@@ -1,0 +1,14 @@
+{
+  "day": 22,
+  "date": "2026-06-08",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 42.590116,
+      "lon": -96.705772,
+      "title": "Camp at Ponca State Park, NE",
+      "photoFilename": "d022-ponca-state-park.jpeg",
+      "photoCaption": "End of day 22."
+    }
+  ]
+}

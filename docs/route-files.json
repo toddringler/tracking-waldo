@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-06T15:44:23.656Z",
+  "generated": "2026-06-09T02:11:26.842Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -114,6 +114,24 @@
       "geojson": "routes/d019-deer-creek-sneak.geojson",
       "pointCount": 10006,
       "distanceKm": 50.367
+    },
+    {
+      "sourceFile": "d020-2512-wylie-avenue-missoula-to-36081-ninemile-prairie-road-missoula-county-mt-usa.gpx",
+      "geojson": "routes/d020-2512-wylie-avenue-missoula-to-36081-ninemile-prairie-road-missoula-county-mt-usa.geojson",
+      "pointCount": 3074,
+      "distanceKm": 122.87
+    },
+    {
+      "sourceFile": "d021-100-north-easy-street-missoula-to-1-scale-road-powder-river-county-mt-usa.gpx",
+      "geojson": "routes/d021-100-north-easy-street-missoula-to-1-scale-road-powder-river-county-mt-usa.geojson",
+      "pointCount": 5976,
+      "distanceKm": 827.336
+    },
+    {
+      "sourceFile": "d022-scale-road-powder-river-county-mt-to-elderberry-ponca-ne-usa.gpx",
+      "geojson": "routes/d022-scale-road-powder-river-county-mt-to-elderberry-ponca-ne-usa.geojson",
+      "pointCount": 4853,
+      "distanceKm": 896.67
     }
   ]
 }

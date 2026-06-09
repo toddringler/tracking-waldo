@@ -50046,23 +50046,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d019-deer-creek-sneak.gpx",
-        "updated": "2026-06-06T15:44:23.656Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -113.969,
-          46.888036,
-          1016.1
-        ]
-      }
     }
   ]
 }
