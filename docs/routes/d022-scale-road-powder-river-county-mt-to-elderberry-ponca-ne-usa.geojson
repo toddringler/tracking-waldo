@@ -24281,23 +24281,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d022-scale-road-powder-river-county-mt-to-elderberry-ponca-ne-usa.gpx",
-        "updated": "2026-06-09T02:11:26.842Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -96.705772,
-          42.590116,
-          404.7
-        ]
-      }
     }
   ]
 }

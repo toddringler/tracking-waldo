@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-09T02:11:26.842Z",
+  "generated": "2026-06-11T14:35:20.336Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -132,6 +132,18 @@
       "geojson": "routes/d022-scale-road-powder-river-county-mt-to-elderberry-ponca-ne-usa.geojson",
       "pointCount": 4853,
       "distanceKm": 896.67
+    },
+    {
+      "sourceFile": "d023-elderberry-ponca-ne-to-2001-interstate-74-covington-in-usa.gpx",
+      "geojson": "routes/d023-elderberry-ponca-ne-to-2001-interstate-74-covington-in-usa.geojson",
+      "pointCount": 5232,
+      "distanceKm": 982.523
+    },
+    {
+      "sourceFile": "d024-2001-interstate-74-covington-in-to-9250-fields-road-gaithersburg-md-usa.gpx",
+      "geojson": "routes/d024-2001-interstate-74-covington-in-to-9250-fields-road-gaithersburg-md-usa.geojson",
+      "pointCount": 7988,
+      "distanceKm": 1025.709
     }
   ]
 }
