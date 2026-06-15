@@ -122,6 +122,7 @@ function processEventFile(filePath) {
         status: event.status || '',
         photoFilename: event.photoFilename || '',
         photoCaption: event.photoCaption || '',
+        scale: event.scale || 1,
       },
     });
   });

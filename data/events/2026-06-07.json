@@ -3,6 +3,13 @@
   "date": "2026-06-07",
   "events": [
     {
+      "type": "incident",
+      "lat": 46.787915,
+      "lon": -113.723754,
+      "title": "2026 Migration temporarily aborted. Heading home.",
+      "scale": 2
+    },
+    {
       "type": "camp",
       "lat": 45.421412,
       "lon": -105.396632,

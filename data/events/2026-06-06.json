@@ -1,0 +1,22 @@
+{
+  "day": 20,
+  "date": "2026-06-06",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 46.9431194444444,
+      "lon": -113.601066666667,
+      "title": "Blackfoot River sighting",
+      "photoFilename": "d020-blackfoot.jpeg",
+      "photoCaption": "Floated the Blackfoot River with Andrew. High water!"
+    },
+    {
+      "type": "sighting",
+      "lat": 46.9493222222222,
+      "lon": -113.542611111111,
+      "title": "Salmon fly hatch sighting",
+      "photoFilename": "d020-salmon-fly.jpeg",
+      "photoCaption": "Salmon flies were flitting around all day. Won't be long before the blizzard arrives."
+    }
+  ]
+}

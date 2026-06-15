@@ -19,7 +19,8 @@
         "mood": "optimistic",
         "status": "all systems nominal.",
         "photoFilename": "d001-wegmans.jpeg",
-        "photoCaption": "One last stop before saying goodbye to Wegmans until the fall."
+        "photoCaption": "One last stop before saying goodbye to Wegmans until the fall.",
+        "scale": 1
       }
     },
     {
@@ -40,7 +41,8 @@
         "mood": "concerned",
         "status": "above 32C all day. too hot. where is the Arctic?",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -61,7 +63,8 @@
         "mood": "optimistic",
         "status": "system nominal. Navigator in a tizzy. something about ticks everywhere. i wonder about him.",
         "photoFilename": "d002-camp-road.jpeg",
-        "photoCaption": "sweet Michigan double track on way into camp"
+        "photoCaption": "sweet Michigan double track on way into camp",
+        "scale": 1
       }
     },
     {
@@ -82,7 +85,8 @@
         "mood": "concerned",
         "status": "too nice of a day for rest.",
         "photoFilename": "d003-grace-debut.jpeg",
-        "photoCaption": "Grace excited to get some mud on her tires, then enjoy a relaxing float."
+        "photoCaption": "Grace excited to get some mud on her tires, then enjoy a relaxing float.",
+        "scale": 1
       }
     },
     {
@@ -103,7 +107,8 @@
         "mood": "optimistic",
         "status": "refigrator on the fritz. will monitor.",
         "photoFilename": "d004-pancake-bay.jpeg",
-        "photoCaption": "Lake Superior from Pancake Bay."
+        "photoCaption": "Lake Superior from Pancake Bay.",
+        "scale": 1
       }
     },
     {
@@ -124,7 +129,8 @@
         "mood": "optimistic",
         "status": "refigrator still on the fritz.",
         "photoFilename": "d005-agawa-steelhead.jpeg",
-        "photoCaption": "An Agawa River steelhead, caught and released by The Navigator."
+        "photoCaption": "An Agawa River steelhead, caught and released by The Navigator.",
+        "scale": 1
       }
     },
     {
@@ -145,7 +151,8 @@
         "mood": "content",
         "status": "refigrator still on the fritz.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -166,7 +173,8 @@
         "mood": "optimistic",
         "status": "refigrator still on the fritz.",
         "photoFilename": "d006-coaster.jpeg",
-        "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator."
+        "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator.",
+        "scale": 1
       }
     },
     {
@@ -187,7 +195,8 @@
         "mood": "optimistic",
         "status": "refigrator thinking about working again.",
         "photoFilename": "d007-coaster.mov",
-        "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator."
+        "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator.",
+        "scale": 1
       }
     },
     {
@@ -208,7 +217,8 @@
         "mood": "optimistic",
         "status": "refigrator is working. reason unknown.",
         "photoFilename": "d008-steel-camp.jpeg",
-        "photoCaption": "A perfect evening. Cool. Some sun. No bugs."
+        "photoCaption": "A perfect evening. Cool. Some sun. No bugs.",
+        "scale": 1
       }
     },
     {
@@ -229,7 +239,8 @@
         "mood": "content",
         "status": "refigrator is not working. reason unknown.",
         "photoFilename": "d009-steel-river.jpeg",
-        "photoCaption": "Sun is out. It's warm. No bugs. Yet."
+        "photoCaption": "Sun is out. It's warm. No bugs. Yet.",
+        "scale": 1
       }
     },
     {
@@ -250,7 +261,8 @@
         "mood": "cautious",
         "status": "Completed field repair of Dometic CFX3. Resumed travel.",
         "photoFilename": "d010-field-repair.jpeg",
-        "photoCaption": "Field repair in progress."
+        "photoCaption": "Field repair in progress.",
+        "scale": 1
       }
     },
     {
@@ -271,7 +283,8 @@
         "mood": "content",
         "status": "Camp established and systems check complete.",
         "photoFilename": "d010-cypress-river-camp.jpeg",
-        "photoCaption": "Cypress River camp setup for day 10."
+        "photoCaption": "Cypress River camp setup for day 10.",
+        "scale": 1
       }
     },
     {
@@ -292,7 +305,8 @@
         "mood": "content",
         "status": "The Navigator fished near Cypress River while I recharged the camper battery.",
         "photoFilename": "d011-cypress-river.jpeg",
-        "photoCaption": "Cypress River."
+        "photoCaption": "Cypress River.",
+        "scale": 1
       }
     },
     {
@@ -313,7 +327,8 @@
         "mood": "content",
         "status": "Set camp near Kakabeka Falls.",
         "photoFilename": "d011-kakabeca-falls-camp.jpeg",
-        "photoCaption": "Camp near Kakabeka Falls."
+        "photoCaption": "Camp near Kakabeka Falls.",
+        "scale": 1
       }
     },
     {
@@ -334,7 +349,8 @@
         "mood": "content",
         "status": "Moose spotted along the route in northern forest country.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -355,7 +371,8 @@
         "mood": "cautious",
         "status": "Observed a sow with cubs from a safe distance and continued on route.",
         "photoFilename": "d012-sow-with-coys-sighting.jpeg",
-        "photoCaption": "Sow with cubs sighting on day 12."
+        "photoCaption": "Sow with cubs sighting on day 12.",
+        "scale": 1
       }
     },
     {
@@ -376,7 +393,8 @@
         "mood": "content",
         "status": "Wild camp established for the night just outside of the refuge.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -397,7 +415,8 @@
         "mood": "content",
         "status": "Departed from the Agassiz area and continued west on day 13.",
         "photoFilename": "d013-agassiz.jpeg",
-        "photoCaption": "Day 13 start near Agassiz."
+        "photoCaption": "Day 13 start near Agassiz.",
+        "scale": 1
       }
     },
     {
@@ -418,7 +437,8 @@
         "mood": "content",
         "status": "Camp set at the end of day 13 for the night.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -439,7 +459,8 @@
         "mood": "cautious",
         "status": "Rainy. Windy. Cold. But camp set at the end of day 14 route.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -460,7 +481,8 @@
         "mood": "content",
         "status": "Camp set for the next three nights.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -481,7 +503,8 @@
         "mood": "optimistic",
         "status": "Suspension upgraded.",
         "photoFilename": "d018-overland-cruisers.jpeg",
-        "photoCaption": "New Dobinson MRR shocks and coils installed at Overland Cruisers."
+        "photoCaption": "New Dobinson MRR shocks and coils installed at Overland Cruisers.",
+        "scale": 1
       }
     },
     {
@@ -502,7 +525,8 @@
         "mood": "content",
         "status": "Camp set in Missoula, MT for a few days.",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
       }
     },
     {
@@ -523,7 +547,74 @@
         "mood": "",
         "status": "",
         "photoFilename": "",
-        "photoCaption": ""
+        "photoCaption": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.601066666667,
+          46.9431194444444
+        ]
+      },
+      "properties": {
+        "day": 20,
+        "date": "2026-06-06",
+        "type": "sighting",
+        "title": "Blackfoot River sighting",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "d020-blackfoot.jpeg",
+        "photoCaption": "Floated the Blackfoot River. High water!",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.542611111111,
+          46.9493222222222
+        ]
+      },
+      "properties": {
+        "day": 20,
+        "date": "2026-06-06",
+        "type": "sighting",
+        "title": "Salmon fly hatch sighting",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "d020-salmon-fly.jpeg",
+        "photoCaption": "Salmon flies where flitting around all day. Won't be long before the blizzard arrives.",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.723754,
+          46.787915
+        ]
+      },
+      "properties": {
+        "day": 21,
+        "date": "2026-06-07",
+        "type": "incident",
+        "title": "2026 Migration temporarily aborted. Heading home.",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "",
+        "photoCaption": "",
+        "scale": 2
       }
     },
     {
@@ -544,7 +635,8 @@
         "mood": "",
         "status": "",
         "photoFilename": "d021-rest-stop.jpeg",
-        "photoCaption": "End of day 21."
+        "photoCaption": "End of day 21.",
+        "scale": 1
       }
     },
     {
@@ -565,10 +657,33 @@
         "mood": "",
         "status": "",
         "photoFilename": "d022-ponca-state-park.jpeg",
-        "photoCaption": "End of day 22."
+        "photoCaption": "End of day 22.",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.504371,
+          40.116675
+        ]
+      },
+      "properties": {
+        "day": 23,
+        "date": "2026-06-09",
+        "type": "camp",
+        "title": "Slept at rest stop at Illinois/Indiana border",
+        "thought": "",
+        "mood": "",
+        "status": "",
+        "photoFilename": "",
+        "photoCaption": "",
+        "scale": 1
       }
     }
   ],
-  "generated": "2026-06-09T02:16:10.876Z",
-  "totalEvents": 27
+  "generated": "2026-06-15T15:56:08.400Z",
+  "totalEvents": 31
 }

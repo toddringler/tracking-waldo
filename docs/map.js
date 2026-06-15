@@ -184,7 +184,7 @@ function addEventsLayer(data) {
     type: 'circle',
     source: 'events',
     paint: {
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 6, 12, 14],
+      'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, ['*', ['coalesce', ['get', 'scale'], 1], 6], 12, ['*', ['coalesce', ['get', 'scale'], 1], 14]],
       'circle-color': [
         'match', ['get', 'type'],
         'fuel',     '#e36b00',
@@ -204,7 +204,7 @@ function addEventsLayer(data) {
     type: 'circle',
     source: 'events',
     paint: {
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 4, 12, 10],
+      'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, ['*', ['coalesce', ['get', 'scale'], 1], 4], 12, ['*', ['coalesce', ['get', 'scale'], 1], 10]],
       'circle-color': [
         'match', ['get', 'type'],
         'fuel',     '#e36b00',
