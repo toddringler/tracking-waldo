@@ -122,6 +122,9 @@ function processEventFile(filePath) {
         status: event.status || '',
         photoFilename: event.photoFilename || '',
         photoCaption: event.photoCaption || '',
+        photoNote: Array.isArray(event.photoNote)
+          ? event.photoNote.join('\n\n')
+          : (event.photoNote || ''),
         scale: event.scale || 1,
       },
     });

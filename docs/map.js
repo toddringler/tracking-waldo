@@ -318,6 +318,7 @@ function showEventPopup(coords, props) {
   const media = buildEventMedia(photoFilename);
   const mediaLabel = media.kind === 'video' ? '🎬 View Video' : '📷 View Photo';
   const photoCaption = props.photoCaption || props.title || 'Event photo';
+  const photoNote = props.photoNote || '';
 
   const html = `
     <div class="popup-inner">
@@ -332,7 +333,7 @@ function showEventPopup(coords, props) {
       <div class="popup-meta">
         ${props.mood ? `<span class="popup-mood">${moodEmoji} ${escapeHtml(props.mood)}</span>` : ''}
       </div>
-      ${media.url ? `<button class="btn popup-photo-btn" data-photo-url="${escapeHtml(media.url)}" data-photo-kind="${escapeHtml(media.kind)}" data-photo-caption="${escapeHtml(photoCaption)}">${mediaLabel}</button>` : ''}
+      ${media.url ? `<button class="btn popup-photo-btn" data-photo-url="${escapeHtml(media.url)}" data-photo-kind="${escapeHtml(media.kind)}" data-photo-caption="${escapeHtml(photoCaption)}" data-photo-note="${escapeHtml(photoNote)}">${mediaLabel}</button>` : ''}
       ${props.status ? `<div class="popup-status">${escapeHtml(props.status)}</div>` : ''}
     </div>
   `;
@@ -349,7 +350,8 @@ function showEventPopup(coords, props) {
       openPhotoOverlay(
         photoBtn.dataset.photoUrl || '',
         photoBtn.dataset.photoCaption || 'Event photo',
-        photoBtn.dataset.photoKind || 'image'
+        photoBtn.dataset.photoKind || 'image',
+        photoBtn.dataset.photoNote || ''
       );
     });
   }
@@ -579,17 +581,28 @@ function setupPhotoOverlay() {
   });
 }
 
-function openPhotoOverlay(url, caption, mediaKind) {
+function openPhotoOverlay(url, caption, mediaKind, note) {
   if (!url) return;
 
   const overlay = document.getElementById('photo-overlay');
   const image = document.getElementById('photo-overlay-image');
   const video = document.getElementById('photo-overlay-video');
   const captionEl = document.getElementById('photo-overlay-caption');
+  const noteEl = document.getElementById('photo-overlay-note');
 
   if (!overlay || !image || !video || !captionEl) return;
 
   captionEl.textContent = caption || '';
+
+  if (noteEl) {
+    if (note) {
+      noteEl.textContent = note;
+      noteEl.hidden = false;
+    } else {
+      noteEl.textContent = '';
+      noteEl.hidden = true;
+    }
+  }
 
   if (mediaKind === 'video') {
     image.src = '';
@@ -624,6 +637,7 @@ function closePhotoOverlay() {
   const overlay = document.getElementById('photo-overlay');
   const image = document.getElementById('photo-overlay-image');
   const video = document.getElementById('photo-overlay-video');
+  const noteEl = document.getElementById('photo-overlay-note');
 
   if (!overlay || !image || !video) return;
 
@@ -638,6 +652,11 @@ function closePhotoOverlay() {
   video.src = '';
   video.onerror = null;
   video.style.display = 'none';
+
+  if (noteEl) {
+    noteEl.textContent = '';
+    noteEl.hidden = true;
+  }
 }
 
 function normalizePhotoFilename(value) {

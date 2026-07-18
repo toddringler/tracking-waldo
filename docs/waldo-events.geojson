@@ -20,6 +20,7 @@
         "status": "all systems nominal.",
         "photoFilename": "d001-wegmans.jpeg",
         "photoCaption": "One last stop before saying goodbye to Wegmans until the fall.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -42,6 +43,7 @@
         "status": "above 32C all day. too hot. where is the Arctic?",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -64,6 +66,7 @@
         "status": "system nominal. Navigator in a tizzy. something about ticks everywhere. i wonder about him.",
         "photoFilename": "d002-camp-road.jpeg",
         "photoCaption": "sweet Michigan double track on way into camp",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -86,6 +89,7 @@
         "status": "too nice of a day for rest.",
         "photoFilename": "d003-grace-debut.jpeg",
         "photoCaption": "Grace excited to get some mud on her tires, then enjoy a relaxing float.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -108,6 +112,7 @@
         "status": "refigrator on the fritz. will monitor.",
         "photoFilename": "d004-pancake-bay.jpeg",
         "photoCaption": "Lake Superior from Pancake Bay.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -130,6 +135,7 @@
         "status": "refigrator still on the fritz.",
         "photoFilename": "d005-agawa-steelhead.jpeg",
         "photoCaption": "An Agawa River steelhead, caught and released by The Navigator.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -152,6 +158,7 @@
         "status": "refigrator still on the fritz.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -174,6 +181,7 @@
         "status": "refigrator still on the fritz.",
         "photoFilename": "d006-coaster.jpeg",
         "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -196,6 +204,7 @@
         "status": "refigrator thinking about working again.",
         "photoFilename": "d007-coaster.mov",
         "photoCaption": "An Agawa River lake-run brook trout, aka coaster, caught and released by The Navigator.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -218,6 +227,7 @@
         "status": "refigrator is working. reason unknown.",
         "photoFilename": "d008-steel-camp.jpeg",
         "photoCaption": "A perfect evening. Cool. Some sun. No bugs.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -240,6 +250,7 @@
         "status": "refigrator is not working. reason unknown.",
         "photoFilename": "d009-steel-river.jpeg",
         "photoCaption": "Sun is out. It's warm. No bugs. Yet.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -262,6 +273,7 @@
         "status": "Completed field repair of Dometic CFX3. Resumed travel.",
         "photoFilename": "d010-field-repair.jpeg",
         "photoCaption": "Field repair in progress.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -284,6 +296,7 @@
         "status": "Camp established and systems check complete.",
         "photoFilename": "d010-cypress-river-camp.jpeg",
         "photoCaption": "Cypress River camp setup for day 10.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -306,6 +319,7 @@
         "status": "The Navigator fished near Cypress River while I recharged the camper battery.",
         "photoFilename": "d011-cypress-river.jpeg",
         "photoCaption": "Cypress River.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -328,6 +342,7 @@
         "status": "Set camp near Kakabeka Falls.",
         "photoFilename": "d011-kakabeca-falls-camp.jpeg",
         "photoCaption": "Camp near Kakabeka Falls.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -350,6 +365,7 @@
         "status": "Moose spotted along the route in northern forest country.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -372,6 +388,7 @@
         "status": "Observed a sow with cubs from a safe distance and continued on route.",
         "photoFilename": "d012-sow-with-coys-sighting.jpeg",
         "photoCaption": "Sow with cubs sighting on day 12.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -394,6 +411,7 @@
         "status": "Wild camp established for the night just outside of the refuge.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -416,6 +434,7 @@
         "status": "Departed from the Agassiz area and continued west on day 13.",
         "photoFilename": "d013-agassiz.jpeg",
         "photoCaption": "Day 13 start near Agassiz.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -438,6 +457,7 @@
         "status": "Camp set at the end of day 13 for the night.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -460,6 +480,7 @@
         "status": "Rainy. Windy. Cold. But camp set at the end of day 14 route.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -482,6 +503,7 @@
         "status": "Camp set for the next three nights.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -504,6 +526,7 @@
         "status": "Suspension upgraded.",
         "photoFilename": "d018-overland-cruisers.jpeg",
         "photoCaption": "New Dobinson MRR shocks and coils installed at Overland Cruisers.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -526,6 +549,7 @@
         "status": "Camp set in Missoula, MT for a few days.",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -548,6 +572,7 @@
         "status": "",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -569,7 +594,8 @@
         "mood": "",
         "status": "",
         "photoFilename": "d020-blackfoot.jpeg",
-        "photoCaption": "Floated the Blackfoot River. High water!",
+        "photoCaption": "Floated the Blackfoot River with Andrew. High water!",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -591,7 +617,8 @@
         "mood": "",
         "status": "",
         "photoFilename": "d020-salmon-fly.jpeg",
-        "photoCaption": "Salmon flies where flitting around all day. Won't be long before the blizzard arrives.",
+        "photoCaption": "Salmon flies were flitting around all day. Won't be long before the blizzard arrives.",
+        "photoNote": "Salmon flies (Pteronarcys californica) are among the largest stoneflies in North America — adults can reach nearly 2 inches. They hatch once a year, usually triggered by water temps climbing into the mid-40s °F, and the hatch window on a given stretch of river is only a few days.\n\nWhen it happens, it's chaos. The bugs come off in clouds so thick you can smell them. Trout gorge themselves to the point of being almost unhookable — they barely need to move to eat.\n\nWaldo spotted this cluster clinging to streamside willows near the takeout at the old Johnsrud bridge. Andrew reckoned the main event was still a day or two out upriver. The water was running high and fast — maybe 6,000 cfs — which pushes the fish tight to the banks and into the slower eddies.\n\nThis is why people plan trips to the Blackfoot in June.",
         "scale": 1
       }
     },
@@ -614,6 +641,7 @@
         "status": "",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 2
       }
     },
@@ -636,6 +664,7 @@
         "status": "",
         "photoFilename": "d021-rest-stop.jpeg",
         "photoCaption": "End of day 21.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -658,6 +687,7 @@
         "status": "",
         "photoFilename": "d022-ponca-state-park.jpeg",
         "photoCaption": "End of day 22.",
+        "photoNote": "",
         "scale": 1
       }
     },
@@ -680,10 +710,11 @@
         "status": "",
         "photoFilename": "",
         "photoCaption": "",
+        "photoNote": "",
         "scale": 1
       }
     }
   ],
-  "generated": "2026-06-15T15:56:08.400Z",
+  "generated": "2026-07-18T14:58:28.143Z",
   "totalEvents": 31
 }

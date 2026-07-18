@@ -904,6 +904,42 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow: hidden;
+}
+
+#photo-overlay-body {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#photo-overlay-media-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+#photo-overlay-note {
+  width: 260px;
+  min-width: 180px;
+  max-width: 300px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background: var(--color-bg, #0d1117);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 #photo-overlay-close {
@@ -923,7 +959,7 @@ textarea.form-control {
 
 #photo-overlay-image {
   width: 100%;
-  max-height: calc(92vh - 100px);
+  max-height: calc(92vh - 110px);
   object-fit: contain;
   border-radius: var(--radius-sm);
   background: #0f141b;
@@ -932,7 +968,7 @@ textarea.form-control {
 #photo-overlay-video {
   display: none;
   width: 100%;
-  max-height: calc(92vh - 100px);
+  max-height: calc(92vh - 110px);
   border-radius: var(--radius-sm);
   background: #0f141b;
 }
@@ -953,6 +989,15 @@ textarea.form-control {
     border-radius: 0;
     border-left: none;
     box-shadow: none;
+  }
+  #photo-overlay-body {
+    flex-direction: column;
+  }
+  #photo-overlay-note {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    max-height: 160px;
   }
 }
 
