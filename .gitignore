@@ -5,3 +5,5 @@ npm-debug.log*
 *.swo
 .env
 local-config.js
+data/tmp
+data/tmp/*
