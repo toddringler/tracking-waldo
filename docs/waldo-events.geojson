@@ -713,8 +713,31 @@
         "photoNote": "",
         "scale": 1
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.315253,
+          39.032173
+        ]
+      },
+      "properties": {
+        "day": 25,
+        "date": "2026-07-18",
+        "type": "camp",
+        "title": "Stormy Night at Dolly Sods",
+        "thought": "The Navigator is calling this Day 1 of Attempt 2. I'm still counting it as Day 25.",
+        "mood": "content",
+        "status": "",
+        "photoFilename": "d025-camp.jpeg",
+        "photoCaption": "Habitat module deployed at Red Creek Campground in Dolly Sods. Windy, overcast skies and dense forest surround the site.",
+        "photoNote": "Crossing the country without melting in a heatwave or burning in a wildfire. An even bet, at best.\n\nA more southern route this time. Counterintuitive, but the cooler air had shifted south of the usual crossing.\n\nA cold front rolled in as I rolled out of Maryland. Rain most of the way to Dolly Sods — I did not object.\n\nThe Navigator recalibrated the Stauns: 3.5 turns for 30 psi. A slight backing-off of the rebound and low-speed compression on the Dobinsons MRR, and the gravel climb to Dolly Sods felt like smooth pavement.\n\nA stormy night at 4,000 feet in West Virginia. I'm exactly where I'm supposed to be.",
+        "scale": 1
+      }
     }
   ],
-  "generated": "2026-07-18T14:58:28.143Z",
-  "totalEvents": 31
+  "generated": "2026-07-19T01:14:52.268Z",
+  "totalEvents": 32
 }

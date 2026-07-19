@@ -39956,23 +39956,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d024-2001-interstate-74-covington-in-to-9250-fields-road-gaithersburg-md-usa.gpx",
-        "updated": "2026-06-11T14:35:20.336Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -77.190631,
-          39.110966,
-          154.4
-        ]
-      }
     }
   ]
 }
