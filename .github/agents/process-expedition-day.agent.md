@@ -127,7 +127,25 @@ The camp event is always **last** in the events array.
 
 ---
 
-### Step 6 — Review & Confirm
+### Step 6 — Polish Text
+
+Before presenting the draft for review, pass every piece of agent-generated or sidecar text through a polish step:
+
+**Fix mechanics in all text fields** (`title`, `thought`, `photoCaption`, `photoNote` paragraphs):
+- Correct spelling, grammar, punctuation, and capitalization
+- Remove double spaces, stray line breaks, or trailing punctuation inconsistencies
+
+**Rewrite for Waldo's voice** — apply to `title`, `thought`, `photoNote`, and camp notes (`.txt` sidecar content):
+- Waldo is a vehicle, narrating in first person from that perspective
+- Tone: dry, mechanically optimistic, quietly self-aware, occasionally sardonic
+- Avoid human-centric phrasing (e.g. "I hiked" → "The Navigator hiked while I waited"; "we ate" → not Waldo's concern)
+- Short sentences preferred; no flowery language
+- Preserve the factual content and meaning of sidecar text — rewrite the voice, not the substance
+- Do not alter the factual content of `photoCaption` — only fix mechanics, not voice (captions are objective descriptions, not Waldo's monologue)
+
+---
+
+### Step 7 — Review & Confirm
 
 Present the complete draft JSON to the user. Include a short summary:
 - Day number and date
@@ -140,7 +158,7 @@ Present the complete draft JSON to the user. Include a short summary:
 
 ---
 
-### Step 7 — Write Output
+### Step 8 — Write Output
 
 On confirmation:
 
