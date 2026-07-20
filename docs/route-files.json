@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T01:13:00.146Z",
+  "generated": "2026-07-20T02:19:59.077Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -150,6 +150,12 @@
       "geojson": "routes/d025-10315_Darnestown_Road-Rockville-MD_to_Red_Creek_Campground-Tucker_County-WV-USA.geojson",
       "pointCount": 3953,
       "distanceKm": 264.04
+    },
+    {
+      "sourceFile": "d026-Red_Creek_Campground-Tucker_County-WV_to_Woodland-Powell_County-KY-USA.gpx",
+      "geojson": "routes/d026-Red_Creek_Campground-Tucker_County-WV_to_Woodland-Powell_County-KY-USA.geojson",
+      "pointCount": 9206,
+      "distanceKm": 566.679
     }
   ]
 }

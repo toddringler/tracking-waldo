@@ -20,9 +20,9 @@ Use the todo list to track each step. Mark steps complete as you go.
 Extract the day tag from the user's request (e.g. "process d025" → `d025`, day number `25`).
 **Day number is an integer — strip leading zeros** (e.g. `d025` → `25`, not `025` or `"025"`).
 
-**First, verify the directory exists.** If `tmp/<daytag>/` does not exist, stop immediately and report the error — do not proceed.
+**First, verify the directory exists.** If `data/tmp/<daytag>/` does not exist, stop immediately and report the error — do not proceed.
 
-List all files in `tmp/<daytag>/` and categorize them:
+List all files in `data/tmp/<daytag>/` and categorize them:
 - **GPX**: single `.gpx` file
 - **Camp photo**: photo whose filename contains `camp` (case-insensitive)
 - **Camp text**: `.txt` file whose filename contains `camp`
@@ -45,10 +45,10 @@ Warn if any of these are missing or ambiguous:
 Run these commands — substitute the actual GPX filename for `<gpxfile>`:
 ```sh
 # First trackpoint time (for date derivation)
-grep -o '<time>[^<]*</time>' tmp/<daytag>/<gpxfile> | head -1
+grep -o '<time>[^<]*</time>' data/tmp/<daytag>/<gpxfile> | head -1
 
 # Last trackpoint coordinates (camp location)
-grep -o '<trkpt[^>]*>' tmp/<daytag>/<gpxfile> | tail -1
+grep -o '<trkpt[^>]*>' data/tmp/<daytag>/<gpxfile> | tail -1
 # Returns e.g.: <trkpt lat="47.32468" lon="-84.61120">
 # Extract the lat and lon attribute values — lon is already signed (negative = west)
 ```
@@ -71,7 +71,7 @@ For each photo that does **not** contain `camp` in the filename:
 ```sh
 node -e "
   const fs = require('fs');
-  const gpx = fs.readFileSync('tmp/<daytag>/<gpxfile>', 'utf8');
+  const gpx = fs.readFileSync('data/tmp/<daytag>/<gpxfile>', 'utf8');
   const pts = [...gpx.matchAll(/<trkpt lat=\"([^\"]+)\" lon=\"([^\"]+)\">[\\s\\S]*?<time>([^<]+)<\/time>/g)]
     .map(m => ({ lat: +m[1], lon: +m[2], t: new Date(m[3]) }));
   const target = new Date('<photo-utc-timestamp>');
@@ -132,7 +132,7 @@ The camp event is always **last** in the events array.
 Before presenting the draft for review, pass every piece of agent-generated or sidecar text through a polish step:
 
 **Fix mechanics in all text fields** (`title`, `thought`, `photoCaption`, `photoNote` paragraphs):
-- Correct spelling, grammar, punctuation, and capitalization
+- Turn into sentences. Correct spelling, grammar, punctuation, and capitalization
 - Remove double spaces, stray line breaks, or trailing punctuation inconsistencies
 
 **Rewrite for Waldo's voice** — apply to `title`, `thought`, `photoNote`, and camp notes (`.txt` sidecar content):
@@ -140,7 +140,7 @@ Before presenting the draft for review, pass every piece of agent-generated or s
 - Tone: dry, mechanically optimistic, quietly self-aware, occasionally sardonic
 - Avoid human-centric phrasing (e.g. "I hiked" → "The Navigator hiked while I waited"; "we ate" → not Waldo's concern)
 - Short sentences preferred; no flowery language
-- Preserve the factual content and meaning of sidecar text — rewrite the voice, not the substance
+- Preserve the factual content — but rewrite the voice of Waldo
 - Do not alter the factual content of `photoCaption` — only fix mechanics, not voice (captions are objective descriptions, not Waldo's monologue)
 
 ---
@@ -178,8 +178,8 @@ On confirmation:
 2. **Run** `npm run build` to regenerate GeoJSON and rebuild the site
    - If the build **fails**: report the error output, note that `data/events/YYYY-MM-DD.json` was written but the site GeoJSON was not updated, and stop — do not archive. The user should fix the error and re-run `npm run build` manually.
 
-3. **Archive** (only if build succeeded): copy all files from `tmp/<daytag>/` to `data/raw/<daytag>/` (overwriting existing files is permitted)
-   - Do **NOT** delete `tmp/<daytag>/`
+3. **Archive** (only if build succeeded): copy all files from `data/tmp/<daytag>/` to `data/raw/<daytag>/` (overwriting existing files is permitted)
+   - Do **NOT** delete `data/tmp/<daytag>/`
 
 Report what was written, the build result, and the archive location.
 

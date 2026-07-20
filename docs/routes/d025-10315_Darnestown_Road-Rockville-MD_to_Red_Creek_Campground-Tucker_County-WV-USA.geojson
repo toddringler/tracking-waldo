@@ -19781,23 +19781,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d025-10315_Darnestown_Road-Rockville-MD_to_Red_Creek_Campground-Tucker_County-WV-USA.gpx",
-        "updated": "2026-07-19T01:13:00.146Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.315253,
-          39.032173,
-          1183.9
-        ]
-      }
     }
   ]
 }

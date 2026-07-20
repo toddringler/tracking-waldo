@@ -733,11 +733,57 @@
         "status": "",
         "photoFilename": "d025-camp.jpeg",
         "photoCaption": "Habitat module deployed at Red Creek Campground in Dolly Sods. Windy, overcast skies and dense forest surround the site.",
-        "photoNote": "Crossing the country without melting in a heatwave or burning in a wildfire. An even bet, at best.\n\nA more southern route this time. Counterintuitive, but the cooler air had shifted south of the usual crossing.\n\nA cold front rolled in as I rolled out of Maryland. Rain most of the way to Dolly Sods — I did not object.\n\nThe Navigator recalibrated the Stauns: 3.5 turns for 30 psi. A slight backing-off of the rebound and low-speed compression on the Dobinsons MRR, and the gravel climb to Dolly Sods felt like smooth pavement.\n\nA stormy night at 4,000 feet in West Virginia. I'm exactly where I'm supposed to be.",
+        "photoNote": "The goal is to cross the country without melting the KO3s in a heatwave or burning up in a wildfire. An even bet, at best.\n\nNavigator programmed in a more southern route this time. Counterintuitive, but the cooler air had shifted south of the usual crossing. Works for me.\n\nA cold front rolled in as I rolled out of Maryland. Rained most of the way to Dolly Sods — the water felt good!\n\nThe Navigator recalibrated the Stauns: 3.5 turns for 30 psi. A slight backing-off of the rebound and low-speed compression on the Dobinsons MRR, and the gravel climb to Dolly Sods felt like smooth pavement.\n\nA stormy night at 4,000 feet in West Virginia. I'm exactly where I'm supposed to be. Good to be rolling again.",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.314714,
+          39.032214
+        ]
+      },
+      "properties": {
+        "day": 26,
+        "date": "2026-07-19",
+        "type": "sighting",
+        "title": "Gravel corridor out of Dolly Sods",
+        "thought": "The road out of Dolly Sods had the good sense to stay gravel longer than strictly necessary.",
+        "mood": "",
+        "status": "",
+        "photoFilename": "F62D1C3D-7113-4362-8752-4BDF02F81D43_1_105_c.jpeg",
+        "photoCaption": "View through the windshield looking down a long, straight, narrow gravel road lined with dense summer forest in the Dolly Sods area of Tucker County, West Virginia.",
+        "photoNote": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.677915,
+          37.805928
+        ]
+      },
+      "properties": {
+        "day": 26,
+        "date": "2026-07-19",
+        "type": "camp",
+        "title": "Wild camp, Daniel Boone National Forest",
+        "thought": "The Navigator slept in, which I found entirely reasonable given the quality of the morning light at Dolly Sods.",
+        "mood": "content",
+        "status": "",
+        "photoFilename": "d026-camp.jpeg",
+        "photoCaption": "View into the open truck bed with the tailgate lowered, showing a Dometic fridge secured with blue straps on the left, wooden storage panels and gear on the right, and the habitat module interior in the background.",
+        "photoNote": "A relaxed morning at camp, soaking in the cool Dolly Sods sunshine.\n\nA road closure out of Dolly Sods extended the gravel portion of the departure — an inconvenience I chose to interpret as a bonus.\n\nThe Navigator stopped for three hours to watch the World Cup final, which I supported by remaining parked and declining to form opinions about football.\n\nWe rolled into Daniel Boone National Forest later than planned and claimed a wild camp in a parking area — which, functionally, is still a campsite.",
         "scale": 1
       }
     }
   ],
-  "generated": "2026-07-19T01:14:52.268Z",
-  "totalEvents": 32
+  "generated": "2026-07-20T02:19:49.832Z",
+  "totalEvents": 34
 }
