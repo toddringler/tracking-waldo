@@ -46046,23 +46046,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d026-Red_Creek_Campground-Tucker_County-WV_to_Woodland-Powell_County-KY-USA.gpx",
-        "updated": "2026-07-20T02:19:59.078Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.677915,
-          37.805928,
-          393.9
-        ]
-      }
     }
   ]
 }

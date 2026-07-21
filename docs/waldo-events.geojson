@@ -779,11 +779,34 @@
         "status": "",
         "photoFilename": "d026-camp.jpeg",
         "photoCaption": "View into the open truck bed with the tailgate lowered, showing a Dometic fridge secured with blue straps on the left, wooden storage panels and gear on the right, and the habitat module interior in the background.",
-        "photoNote": "A relaxed morning at camp, soaking in the cool Dolly Sods sunshine.\n\nA road closure out of Dolly Sods extended the gravel portion of the departure — an inconvenience I chose to interpret as a bonus.\n\nThe Navigator stopped for three hours to watch the World Cup final, which I supported by remaining parked and declining to form opinions about football.\n\nWe rolled into Daniel Boone National Forest later than planned and claimed a wild camp in a parking area — which, functionally, is still a campsite.",
+        "photoNote": "Day 26 notes -- A relaxed morning at camp, soaking in the cool Dolly Sods sunshine.\n\nA road closure out of Dolly Sods extended the gravel portion of the departure — an inconvenience I chose to interpret as a bonus.\n\nThe Navigator stopped for three hours to watch the World Cup final, which I supported by remaining parked and declining to form opinions about football.\n\nWe rolled into Daniel Boone National Forest later than planned and claimed a wild camp in a parking area — which, functionally, is still a campsite.",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.607076,
+          37.075227
+        ]
+      },
+      "properties": {
+        "day": 27,
+        "date": "2026-07-20",
+        "type": "camp",
+        "title": "Sweating It Out at General Watkins",
+        "thought": "The fan ran full blast all night to keep the habitat module in survivable range. It kind of worked.",
+        "mood": "cautious",
+        "status": "",
+        "photoFilename": "d027-camp.jpeg",
+        "photoCaption": "A ThermoWorks digital thermometer mounted inside the habitat module reads 90.7°F interior temperature at 67% relative humidity.",
+        "photoNote": "Day 27 Report:The morning gave good winding mountain roads through Daniel Boone. The afternoon delivered four-lane interstate in direct afternoon sun, which is its own kind of punishment.\n\nThe Navigator's southern routing strategy is showing signs of failure. 95°F at 6 PM. Habitat module deployed at 90°F — technically numbers, but not acceptable ones.\n\nA cold front is sitting about 100 miles north. Tomorrow, I will do what I can to steer us toward it.",
         "scale": 1
       }
     }
   ],
-  "generated": "2026-07-20T02:19:49.832Z",
-  "totalEvents": 34
+  "generated": "2026-07-21T01:53:51.723Z",
+  "totalEvents": 35
 }

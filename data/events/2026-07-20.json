@@ -1,0 +1,21 @@
+{
+  "day": 27,
+  "date": "2026-07-20",
+  "events": [
+    {
+      "type": "camp",
+      "lat": 37.075227,
+      "lon": -89.607076,
+      "title": "Sweating It Out at General Watkins",
+      "thought": "The fan ran full blast all night to keep the habitat module in survivable range. It kind of worked.",
+      "mood": "cautious",
+      "photoFilename": "d027-camp.jpeg",
+      "photoCaption": "A ThermoWorks digital thermometer mounted inside the habitat module reads 90.7°F interior temperature at 67% relative humidity.",
+      "photoNote": [
+        "Day 27 Report:The morning gave good winding mountain roads through Daniel Boone. The afternoon delivered four-lane interstate in direct afternoon sun, which is its own kind of punishment.",
+        "The Navigator's southern routing strategy is showing signs of failure. 95°F at 6 PM. Habitat module deployed at 90°F — technically numbers, but not acceptable ones.",
+        "A cold front is sitting about 100 miles north. Tomorrow, I will do what I can to steer us toward it."
+      ]
+    }
+  ]
+}
