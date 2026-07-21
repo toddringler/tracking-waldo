@@ -369,10 +369,13 @@ function populateSidebar(data) {
     return;
   }
 
-  container.innerHTML = features.map((f, i) => {
-    const p = f.properties;
-    const config = EVENT_CONFIG[p.type] || { color: '#f0a500', emoji: '📍' };
-    return `
+  container.innerHTML = features
+    .map((f, i) => ({ f, i }))
+    .reverse()
+    .map(({ f, i }) => {
+      const p = f.properties;
+      const config = EVENT_CONFIG[p.type] || { color: '#f0a500', emoji: '📍' };
+      return `
       <div class="event-card" data-index="${i}" onclick="flyToEvent(${i})">
         <div class="event-card-header">
           <div class="event-dot ${p.type}"></div>
@@ -382,7 +385,7 @@ function populateSidebar(data) {
         ${p.thought ? `<div class="event-card-thought">"${escapeHtml(p.thought)}"</div>` : ''}
       </div>
     `;
-  }).join('');
+    }).join('');
 }
 
 function flyToEvent(index) {
