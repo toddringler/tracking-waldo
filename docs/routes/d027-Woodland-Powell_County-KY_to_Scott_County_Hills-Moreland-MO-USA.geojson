@@ -33356,23 +33356,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d027-Woodland-Powell_County-KY_to_Scott_County_Hills-Moreland-MO-USA.gpx",
-        "updated": "2026-07-21T01:51:19.872Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -89.607076,
-          37.075227,
-          148.1
-        ]
-      }
     }
   ]
 }

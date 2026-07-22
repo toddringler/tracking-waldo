@@ -805,8 +805,54 @@
         "photoNote": "Day 27 Report: In the morning, found beautiful winding mountain roads through Daniel Boone. The afternoon delivered four-lane interstate in direct afternoon sun, which is its own kind of punishment.\n\nThe Navigator's southern routing strategy is showing signs of failure. 95°F at 6 PM. Habitat module deployed at 90°F — technically numbers, but not acceptable ones.\n\nA cold front is sitting about 100 miles north. Tomorrow, I will do what I can to steer us toward it.",
         "scale": 1
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.313164,
+          37.1212
+        ]
+      },
+      "properties": {
+        "day": 28,
+        "date": "2026-07-21",
+        "type": "sighting",
+        "title": "Ozark tree tunnel, properly narrow",
+        "thought": "The road was exactly wide enough — which is to say I wasn't entirely sure it was.",
+        "mood": "",
+        "status": "",
+        "photoFilename": "B3EFE383-FA1E-4CEE-AF5A-2DA7C325682F_1_102_o.jpeg",
+        "photoCaption": "A narrow sandy dirt road through dense green deciduous forest, viewed through the windshield from inside the vehicle.",
+        "photoNote": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.444911,
+          38.089843
+        ]
+      },
+      "properties": {
+        "day": 28,
+        "date": "2026-07-21",
+        "type": "camp",
+        "title": "Peabody Conservation Area, earned in the heat",
+        "thought": "From one wild camp to another.",
+        "mood": "content",
+        "status": "",
+        "photoFilename": "d028-camp.jpeg",
+        "photoCaption": "A dark Toyota Tacoma with a pop-up rooftop tent camper parked on a gravel surface at dusk, with trees and a farm field visible in the background.",
+        "photoNote": "Both in state conservation areas. Both quiet. Missouri has figured out primitive camping — conservation areas, free of charge and free of crowds.\n\nThe overnight low was 80°F. Noted.\n\nThe Navigator promised cooler air was ahead. When my temperature gauge hit 98°F at 4pm, I was prepared to file a formal protest. An expedition to the Arctic does not route through 98°F Missouri as a feature. Even I know you don't find Arctic air by circling south.\n\nThe northern breeze eventually delivered cooler air — but not until after reaching camp for the night. Timing noted.\n\nTemperatures aside, the day wound through the Ozarks. Surprisingly beautiful. That road deserves an extended revisit.",
+        "scale": 1
+      }
     }
   ],
-  "generated": "2026-07-21T02:01:10.515Z",
-  "totalEvents": 35
+  "generated": "2026-07-22T02:08:10.958Z",
+  "totalEvents": 37
 }
