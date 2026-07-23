@@ -733,7 +733,7 @@
         "status": "",
         "photoFilename": "d025-camp.jpeg",
         "photoCaption": "Habitat module deployed at Red Creek Campground in Dolly Sods. Windy, overcast skies and dense forest surround the site.",
-        "photoNote": "The goal is to cross the country without melting the KO3s in a heatwave or burning up in a wildfire. An even bet, at best.\n\nNavigator programmed in a more southern route this time. Counterintuitive, but the cooler air had shifted south of the usual crossing. Works for me.\n\nA cold front rolled in as I rolled out of Maryland. Rained most of the way to Dolly Sods — the water felt good!\n\nThe Navigator recalibrated the Stauns: 3.5 turns for 30 psi. A slight backing-off of the rebound and low-speed compression on the Dobinsons MRR, and the gravel climb to Dolly Sods felt like smooth pavement.\n\nA stormy night at 4,000 feet in West Virginia. I'm exactly where I'm supposed to be. Good to be rolling again.",
+        "photoNote": "Report. Day 25. The goal is to cross the country without melting the KO3s in a heatwave or burning up in a wildfire. An even bet, at best.\n\nNavigator programmed in a more southern route this time. Counterintuitive, but the cooler air had shifted south of the usual crossing. Works for me.\n\nA cold front rolled in as I rolled out of Maryland. Rained most of the way to Dolly Sods — the water felt good!\n\nThe Navigator recalibrated the Stauns: 3.5 turns for 30 psi. A slight backing-off of the rebound and low-speed compression on the Dobinsons MRR, and the gravel climb to Dolly Sods felt like smooth pavement.\n\nA stormy night at 4,000 feet in West Virginia. I'm exactly where I'm supposed to be. Good to be rolling again.",
         "scale": 1
       }
     },
@@ -779,7 +779,7 @@
         "status": "",
         "photoFilename": "d026-camp.jpeg",
         "photoCaption": "View into the open truck bed with the tailgate lowered, showing a Dometic fridge secured with blue straps on the left, wooden storage panels and gear on the right, and the habitat module interior in the background.",
-        "photoNote": "Day 26 notes -- A relaxed morning at camp, soaking in the cool Dolly Sods sunshine.\n\nA road closure out of Dolly Sods extended the gravel portion of the departure — an inconvenience I chose to interpret as a bonus.\n\nThe Navigator stopped for three hours to watch the World Cup final, which I supported by remaining parked and declining to form opinions about football.\n\nWe rolled into Daniel Boone National Forest later than planned and claimed a wild camp in a parking area — which, functionally, is still a campsite.",
+        "photoNote": "Report. Day 26. A relaxed morning at camp, soaking in the cool Dolly Sods sunshine.\n\nA road closure out of Dolly Sods extended the gravel portion of the departure — an inconvenience I chose to interpret as a bonus.\n\nThe Navigator stopped for three hours to watch the World Cup final, which I supported by remaining parked and declining to form opinions about football.\n\nWe rolled into Daniel Boone National Forest later than planned and claimed a wild camp in a parking area — which, functionally, is still a campsite.",
         "scale": 1
       }
     },
@@ -802,7 +802,7 @@
         "status": "",
         "photoFilename": "d027-camp.jpeg",
         "photoCaption": "A ThermoWorks digital thermometer mounted inside the habitat module reads 90.7°F interior temperature at 67% relative humidity.",
-        "photoNote": "Day 27 Report: In the morning, found beautiful winding mountain roads through Daniel Boone. The afternoon delivered four-lane interstate in direct afternoon sun, which is its own kind of punishment.\n\nThe Navigator's southern routing strategy is showing signs of failure. 95°F at 6 PM. Habitat module deployed at 90°F — technically numbers, but not acceptable ones.\n\nA cold front is sitting about 100 miles north. Tomorrow, I will do what I can to steer us toward it.",
+        "photoNote": "Report. Day 27. In the morning, found beautiful winding mountain roads through Daniel Boone. The afternoon delivered four-lane interstate in direct afternoon sun, which is its own kind of punishment.\n\nThe Navigator's southern routing strategy is showing signs of failure. 95°F at 6 PM. Habitat module deployed at 90°F — technically numbers, but not acceptable ones.\n\nA cold front is sitting about 100 miles north. Tomorrow, I will do what I can to steer us toward it.",
         "scale": 1
       }
     },
@@ -847,12 +847,81 @@
         "mood": "content",
         "status": "",
         "photoFilename": "d028-camp.jpeg",
-        "photoCaption": "A dark Toyota Tacoma with a pop-up rooftop tent camper parked on a gravel surface at dusk, with trees and a farm field visible in the background.",
-        "photoNote": "Both in state conservation areas. Both quiet. Missouri has figured out primitive camping — conservation areas, free of charge and free of crowds.\n\nThe overnight low was 80°F. Noted.\n\nThe Navigator promised cooler air was ahead. When my temperature gauge hit 98°F at 4pm, I was prepared to file a formal protest. An expedition to the Arctic does not route through 98°F Missouri as a feature. Even I know you don't find Arctic air by circling south.\n\nThe northern breeze eventually delivered cooler air — but not until after reaching camp for the night. Timing noted.\n\nTemperatures aside, the day wound through the Ozarks. Surprisingly beautiful. That road deserves an extended revisit.",
+        "photoCaption": "Waldo resting. Habitat module deployed. Enjoying a quiet moment at dusk, with trees and a farm field visible in the background.",
+        "photoNote": "Report. Day 28. From one wild camp to another. Both in state conservation areas. Both quiet. Missouri has figured out primitive camping — conservation areas, free of charge and free of crowds.\n\nThe overnight low was 80°F. Noted.\n\nThe Navigator promised cooler air was ahead. When my temperature gauge hit 98°F at 4pm, I was prepared to file a formal protest. An expedition to the Arctic does not route through 98°F Missouri as a feature. Even I know you don't find Arctic air by circling south.\n\nThe northern breeze eventually delivered cooler air — but not until after reaching camp for the night. Timing noted.\n\nTemperatures aside, the day wound through the Ozarks. Surprisingly beautiful. That road deserves an extended revisit.",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.847275,
+          38.562675
+        ]
+      },
+      "properties": {
+        "day": 29,
+        "date": "2026-07-22",
+        "type": "sighting",
+        "title": "Burdick Meat Locker, Your Meat's Best Friend",
+        "thought": "I am not personally in the market for custom processing, but I respect any business that commits to Wednesdays and Thursdays.",
+        "mood": "",
+        "status": "",
+        "photoFilename": "burdick-kansas.jpeg",
+        "photoCaption": "The Burdick Meat Locker in Burdick, Kansas — a small white building with red trim advertising custom meat processing, curing, and butchering on Wednesdays and Thursdays.",
+        "photoNote": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.070014,
+          38.609597
+        ]
+      },
+      "properties": {
+        "day": 29,
+        "date": "2026-07-22",
+        "type": "sighting",
+        "title": "Kansas Prairie Double Track, Properly Executed",
+        "thought": "Kansas knows exactly what a road is supposed to look like.",
+        "mood": "",
+        "status": "",
+        "photoFilename": "kansas-praire-double-track.jpeg",
+        "photoCaption": "A narrow dirt double-track road stretching through tall-grass Kansas prairie, viewed through the windshield, with a lone tree visible in the middle distance.",
+        "photoNote": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.555671,
+          38.939579
+        ]
+      },
+      "properties": {
+        "day": 29,
+        "date": "2026-07-22",
+        "type": "camp",
+        "title": "Ellis Town Campground, Surprisingly Full",
+        "thought": "Gravel miles banked, tailwind noted, and the Ellis town camp was closer to capacity than expected — but it held one more.",
+        "mood": "content",
+        "status": "",
+        "photoFilename": "d029-camp.jpeg",
+        "photoCaption": "Waldo parked at the Ellis, Kansas city campground with the habitat module raised, next to a small lake surrounded by large cottonwood trees in evening light.",
+        "photoNote": "Racked up serious gravel and double-track mileage crossing Kansas prairie country. A stiff tailwind pushed from behind nearly the entire day — not something I take for granted out here. Optimistic that tomorrow cooperates similarly.\n\nRolled into Ellis town camp around 19:30 to find it nearly full. Noted for the record: rural towns that operate small campgrounds are doing something right.",
         "scale": 1
       }
     }
   ],
-  "generated": "2026-07-22T02:08:10.958Z",
-  "totalEvents": 37
+  "generated": "2026-07-23T02:13:51.301Z",
+  "totalEvents": 40
 }

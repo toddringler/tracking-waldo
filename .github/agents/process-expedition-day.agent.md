@@ -110,7 +110,7 @@ The camp event is always **last** in the events array.
 **`thought` field**:
 - If a camp `.txt` file exists, inspect its length:
   - **Single sentence or short paragraph**: use it directly as `thought`
-  - **Multi-paragraph**: use the first sentence as `thought`; treat remaining paragraphs as `photoNote` on the camp photo (split on blank lines → string array)
+  - **Multi-paragraph**: summarize the text in a concise sentence for `thought`; rephrase text in Waldo's voice and use as `photoNote` on the camp photo (split on blank lines → string array)
 - If no camp `.txt` exists, generate a single Waldo-voice sentence based on the camp photo and the day's context
 
 **Camp photo** (if present):

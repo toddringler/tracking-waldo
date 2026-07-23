@@ -39306,23 +39306,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d028-Scott_County_Hills-Moreland_to_Strip_Pit_4-Howard-MO-USA.gpx",
-        "updated": "2026-07-22T02:08:23.512Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -94.444911,
-          38.089843,
-          275.2
-        ]
-      }
     }
   ]
 }

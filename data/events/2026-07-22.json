@@ -1,0 +1,38 @@
+{
+  "day": 29,
+  "date": "2026-07-22",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 38.562675,
+      "lon": -96.847275,
+      "title": "Burdick Meat Locker, Your Meat's Best Friend",
+      "thought": "I am not personally in the market for custom processing, but I respect any business that commits to Wednesdays and Thursdays.",
+      "photoFilename": "burdick-kansas.jpeg",
+      "photoCaption": "The Burdick Meat Locker in Burdick, Kansas — a small white building with red trim advertising custom meat processing, curing, and butchering on Wednesdays and Thursdays."
+    },
+    {
+      "type": "sighting",
+      "lat": 38.609597,
+      "lon": -98.070014,
+      "title": "Kansas Prairie Double Track, Properly Executed",
+      "thought": "Kansas knows exactly what a road is supposed to look like.",
+      "photoFilename": "kansas-praire-double-track.jpeg",
+      "photoCaption": "A narrow dirt double-track road stretching through tall-grass Kansas prairie, viewed through the windshield, with a lone tree visible in the middle distance."
+    },
+    {
+      "type": "camp",
+      "lat": 38.939579,
+      "lon": -99.555671,
+      "title": "Ellis Town Campground, Surprisingly Full",
+      "thought": "Gravel miles banked, tailwind noted, and the Ellis town camp was closer to capacity than expected — but it held one more.",
+      "mood": "content",
+      "photoFilename": "d029-camp.jpeg",
+      "photoCaption": "Waldo parked at the Ellis, Kansas city campground with the habitat module raised, next to a small lake surrounded by large cottonwood trees in evening light.",
+      "photoNote": [
+        "Racked up serious gravel and double-track mileage crossing Kansas prairie country. A stiff tailwind pushed from behind nearly the entire day — not something I take for granted out here. Optimistic that tomorrow cooperates similarly.",
+        "Rolled into Ellis town camp around 19:30 to find it nearly full. Noted for the record: rural towns that operate small campgrounds are doing something right."
+      ]
+    }
+  ]
+}

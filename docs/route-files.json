@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T02:08:23.512Z",
+  "generated": "2026-07-23T02:12:50.271Z",
   "tracks": [
     {
       "sourceFile": "d001-gaithersburg-md-to-harbor-view-shelter-danbury-township-oh-usa.gpx",
@@ -168,6 +168,12 @@
       "geojson": "routes/d028-Scott_County_Hills-Moreland_to_Strip_Pit_4-Howard-MO-USA.geojson",
       "pointCount": 7858,
       "distanceKm": 605.382
+    },
+    {
+      "sourceFile": "d029-Strip_Pit_4-Howard-MO_to_300_East_8th_Street-Ellis-KS-USA.gpx",
+      "geojson": "routes/d029-Strip_Pit_4-Howard-MO_to_300_East_8th_Street-Ellis-KS-USA.geojson",
+      "pointCount": 3203,
+      "distanceKm": 531.499
     }
   ]
 }
