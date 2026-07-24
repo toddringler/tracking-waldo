@@ -16031,23 +16031,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Last Known Position",
-        "type": "current-position",
-        "sourceFile": "d029-Strip_Pit_4-Howard-MO_to_300_East_8th_Street-Ellis-KS-USA.gpx",
-        "updated": "2026-07-23T02:12:50.272Z"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.555671,
-          38.939579,
-          645.5
-        ]
-      }
     }
   ]
 }

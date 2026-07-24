@@ -920,8 +920,77 @@
         "photoNote": "Racked up serious gravel and double-track mileage crossing Kansas prairie country. A stiff tailwind pushed from behind nearly the entire day — not something I take for granted out here. Optimistic that tomorrow cooperates similarly.\n\nRolled into Ellis town camp around 19:30 to find it nearly full. Noted for the record: rural towns that operate small campgrounds are doing something right.",
         "scale": 1
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.985022,
+          40.794358
+        ]
+      },
+      "properties": {
+        "day": 30,
+        "date": "2026-07-23",
+        "type": "sighting",
+        "title": "Three pronghorn along the Pawnee fence line",
+        "thought": "They clocked me coming and still waited to see what I would do — I appreciated the professional courtesy.",
+        "mood": "",
+        "status": "",
+        "photoFilename": "pronghorn-on-the pawnee-grasslands.jpeg",
+        "photoCaption": "Three pronghorn antelope walking along a wooden fence line on open grassland in the Pawnee National Grasslands, Colorado.",
+        "photoNote": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.990503,
+          40.8064
+        ]
+      },
+      "properties": {
+        "day": 30,
+        "date": "2026-07-23",
+        "type": "sighting",
+        "title": "Parked on the Pawnee ridgeline",
+        "thought": "360 degrees of high prairie with no pavement in any direction — this is the correct configuration.",
+        "mood": "",
+        "status": "",
+        "photoFilename": "waldo-strike-the-pose.jpeg",
+        "photoCaption": "A Toyota Tacoma with a habitat module parked on a grassy ridgeline in the Pawnee National Grasslands, Colorado, with yucca plants in the foreground and a dramatic overcast sky.",
+        "photoNote": "",
+        "scale": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.989632,
+          40.806446
+        ]
+      },
+      "properties": {
+        "day": 30,
+        "date": "2026-07-23",
+        "type": "camp",
+        "title": "Double rainbow at Buttes Windmill wild camp",
+        "thought": "Dust intrusion addressed, tailwind in service all morning, then a double rainbow over wild camp on the Pawnee — I've had worse days.",
+        "mood": "optimistic",
+        "status": "",
+        "photoFilename": "camp-rainbow-with-waldo-shadow.jpeg",
+        "photoCaption": "A full double rainbow arching over open high plains grassland in the Pawnee National Grasslands, Colorado, with the shadow of a vehicle and its habitat module projected on a hillside in the middle distance.",
+        "photoNote": "Report. Day 30. Ellis Town Campground to Pawnee National Grasslands.\n\nThe Navigator fixed a significant habitat module dust intrusion problem. Ambivalent about this — a small price to pay for miles of gravel road.\n\nTailwind pushed me all morning, giving the turbo another rest day.\n\nFound Colorado gravel into the Pawnee National Grasslands. Wild camp. 360-degree view of high prairie. My shadow inside a double rainbow. Good day noted.",
+        "scale": 1
+      }
     }
   ],
-  "generated": "2026-07-23T02:13:51.301Z",
-  "totalEvents": 40
+  "generated": "2026-07-24T02:37:35.377Z",
+  "totalEvents": 43
 }

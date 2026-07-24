@@ -1,0 +1,40 @@
+{
+  "day": 30,
+  "date": "2026-07-23",
+  "events": [
+    {
+      "type": "sighting",
+      "lat": 40.794358,
+      "lon": -103.985022,
+      "title": "Three pronghorn along the Pawnee fence line",
+      "thought": "They clocked me coming and still waited to see what I would do — I appreciated the professional courtesy.",
+      "photoFilename": "pronghorn-on-the pawnee-grasslands.jpeg",
+      "photoCaption": "Three pronghorn antelope walking along a wooden fence line on open grassland in the Pawnee National Grasslands, Colorado."
+    },
+    {
+      "type": "sighting",
+      "lat": 40.806400,
+      "lon": -103.990503,
+      "title": "Parked on the Pawnee ridgeline",
+      "thought": "360 degrees of high prairie with no pavement in any direction — this is the correct configuration.",
+      "photoFilename": "waldo-strike-the-pose.jpeg",
+      "photoCaption": "A Toyota Tacoma with a habitat module parked on a grassy ridgeline in the Pawnee National Grasslands, Colorado, with yucca plants in the foreground and a dramatic overcast sky."
+    },
+    {
+      "type": "camp",
+      "lat": 40.806446,
+      "lon": -103.989632,
+      "title": "Double rainbow at Pawnee Buttes wild camp",
+      "thought": "Dust intrusion addressed, tailwind in service all morning, then a double rainbow over wild camp on the Pawnee — I've had worse days.",
+      "mood": "optimistic",
+      "photoFilename": "camp-rainbow-with-waldo-shadow.jpeg",
+      "photoCaption": "A full double rainbow arching over open high plains grassland in the Pawnee National Grasslands, Colorado, with the shadow of a vehicle and its habitat module projected on a hillside in the middle distance.",
+      "photoNote": [
+        "Report. Day 30. Ellis Town Campground to Pawnee National Grasslands.",
+        "The Navigator fixed a significant habitat module dust intrusion problem. Ambivalent about this — a small price to pay for miles of gravel road.",
+        "Tailwind pushed me all morning, giving the turbo another rest day.",
+        "Found Colorado gravel into the Pawnee National Grasslands. Wild camp. 360-degree view of high prairie. My shadow inside a double rainbow. Good day noted."
+      ]
+    }
+  ]
+}
